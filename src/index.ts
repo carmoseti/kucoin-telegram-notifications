@@ -3,7 +3,14 @@ import {logError} from "./utils/log";
 import {tryCatchFinallyUtil} from "./utils/error";
 import WebSocket from "ws";
 import {fixDecimalPlaces} from "./utils/number";
-import {buySignalStrikeNotification, startServiceNotification} from "./utils/telegram";
+import {
+    accountBalanceNotification,
+    buySignalStrikeNotification,
+    buyUnitsNotification,
+    sellLossNotification,
+    sellProfitNotification,
+    startServiceNotification
+} from "./utils/telegram";
 import {config} from "dotenv";
 
 // Load .env properties
@@ -47,12 +54,82 @@ const webSocketConfig = {
 };
 const symbols: {
     [symbol: string]: {
+        amount: number
+        buyPrice: number
         notificationBuyPrice: number
         notificationStrikeCount: number
         notificationStrikeTimeoutId: NodeJS.Timeout
         notificationStrikeUnitPrice: number
+        tradingMinimumTime: number
+        trailingSellPrice: number
+        trailingSellPriceIntervalId: NodeJS.Timeout
+        units: number
     }
 } = {}
+
+let ACCOUNT_USDT_BALANCE: number = 1000
+export const buyUSDTTransaction = (time :number,Data :{[p:string]:any}) => {
+    if (time > symbols[Data.subject].tradingMinimumTime &&
+        ACCOUNT_USDT_BALANCE >= Number(process.env.TRADING_USDT_MIN_AMOUNT) &&
+        !symbols[Data.subject].units
+    ) {
+        const tradingFunds: number = Number(process.env.TRADING_USDT_MIN_AMOUNT)
+        const buyPrice: number = Number(Data.data.price)
+        const units: number = fixDecimalPlaces((tradingFunds / buyPrice))
+
+        ACCOUNT_USDT_BALANCE -= tradingFunds
+        symbols[Data.subject].amount = tradingFunds
+        symbols[Data.subject].buyPrice = buyPrice
+        symbols[Data.subject].trailingSellPrice = fixDecimalPlaces(Number(process.env.TRADING_TRAILING_SELL_PCT) * buyPrice, 20)
+        symbols[Data.subject].units = units
+
+        buyUnitsNotification(Data.subject, units, buyPrice, 'USDT')
+
+        symbols[Data.subject].trailingSellPriceIntervalId = setInterval(
+            () => {
+                symbols[Data.subject].trailingSellPrice = fixDecimalPlaces(
+                    (1 + Number(process.env.TRADING_TRAILING_SELL_BUMP_PCT)) *
+                    symbols[Data.subject].trailingSellPrice, 20);
+            }, 1000 * 60 * Number(process.env.TRADING_TRAILING_SELL_BUMP_INTERVAL_MINS)
+        )
+    }
+}
+
+export const sellUSDTTransaction = (Data :{[p: string] : any}, time :number) => {
+    const symbol = symbols[Data.subject];
+    const sellAmount = fixDecimalPlaces(
+        symbol.units * symbol.trailingSellPrice, 20
+    );
+    if (sellAmount > symbol.amount) {
+        // Profit
+        const profit: number = sellAmount - symbol.amount;
+        const profitPCT: number = fixDecimalPlaces(profit / symbol.amount, 8)
+        sellProfitNotification(Data.subject, symbol.units, profit, 'USDT', profitPCT)
+    } else {
+        // Loss
+        const loss: number = 0;
+        const lossPCT: number = fixDecimalPlaces((symbol.amount - sellAmount) / symbol.amount, 8)
+        sellLossNotification(Data.subject, symbol.units, loss, 'USDT', lossPCT)
+    }
+
+    ACCOUNT_USDT_BALANCE += sellAmount
+    clearInterval(symbol.trailingSellPriceIntervalId)
+
+    symbols[Data.subject] = {
+        amount: 0,
+        buyPrice: 0,
+        notificationBuyPrice: 0,
+        notificationStrikeCount: 0,
+        notificationStrikeTimeoutId: undefined,
+        notificationStrikeUnitPrice: 0,
+        tradingMinimumTime: time + (Number(process.env.TRADING_NEW_SYMBOL_TIMEOUT_MINS) * 60 * 1000),
+        trailingSellPrice: 0,
+        trailingSellPriceIntervalId: undefined,
+        units: 0
+    }
+
+    accountBalanceNotification(ACCOUNT_USDT_BALANCE, 'USDT')
+}
 
 const initialize = () => {
     // Obtain Server List and temporary public token
@@ -112,20 +189,28 @@ const initialize = () => {
                         tryCatchFinallyUtil(
                             () => {
                                 const Data = JSON.parse(data.toString());
+                                const time: number = new Date().getTime();
+
                                 if (Data.subject && hasSupportedQuoteAsset(Data.subject)) {
                                     if (!symbols[Data.subject]) {
                                         symbols[Data.subject] = {
+                                            amount: 0,
+                                            buyPrice: 0,
                                             notificationBuyPrice: 0,
                                             notificationStrikeCount: 0,
                                             notificationStrikeTimeoutId: undefined,
-                                            notificationStrikeUnitPrice: 0
+                                            notificationStrikeUnitPrice: 0,
+                                            tradingMinimumTime: time + (Number(process.env.TRADING_NEW_SYMBOL_TIMEOUT_MINS) * 60 * 1000),
+                                            trailingSellPrice: 0,
+                                            trailingSellPriceIntervalId: undefined,
+                                            units: 0
                                         };
                                     } else {
                                         let symbol = symbols[Data.subject];
                                         // Notifications
                                         const newNotificationBuyPrice: number = symbol.notificationStrikeCount === 0 ?
-                                            fixDecimalPlaces((1.00 + Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)) * Data.data.price, 12) :
-                                            fixDecimalPlaces(symbol.notificationBuyPrice + symbol.notificationStrikeUnitPrice, 12);
+                                            fixDecimalPlaces((1.00 + Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)) * Data.data.price, 20) :
+                                            fixDecimalPlaces(symbol.notificationBuyPrice + symbol.notificationStrikeUnitPrice, 20);
 
                                         if (symbol.notificationBuyPrice) {
                                             if (newNotificationBuyPrice < symbol.notificationBuyPrice) {
@@ -140,7 +225,7 @@ const initialize = () => {
                                             symbols[Data.subject].notificationStrikeCount += 1;
                                             symbol = symbols[Data.subject];
                                             if (symbol.notificationStrikeCount === 1) {
-                                                symbols[Data.subject].notificationStrikeUnitPrice = fixDecimalPlaces((symbol.notificationBuyPrice * Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)) / (1.00 + Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)), 12);
+                                                symbols[Data.subject].notificationStrikeUnitPrice = fixDecimalPlaces((symbol.notificationBuyPrice * Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)) / (1.00 + Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)), 20);
                                             }
 
                                             symbol = symbols[Data.subject];
@@ -157,6 +242,11 @@ const initialize = () => {
                                                     i++;
                                                 }
                                                 if (shouldNotify) buySignalStrikeNotification(Data.subject, Number(Data.data.price), symbol.notificationStrikeCount, Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT), getQuoteAssetName(Data.subject));
+
+                                                // Buy USDT transaction
+                                                if (quoteAsset === "USDT") {
+                                                    buyUSDTTransaction(time,Data)
+                                                }
                                             }
 
                                             if (symbol.notificationStrikeTimeoutId) clearTimeout(symbol.notificationStrikeTimeoutId);
@@ -172,6 +262,20 @@ const initialize = () => {
                                             ) as NodeJS.Timeout;
                                             symbol = symbols[Data.subject];
                                             symbols[Data.subject].notificationBuyPrice = symbol.notificationBuyPrice + symbol.notificationStrikeUnitPrice
+                                        }
+
+                                        // Trail current price
+                                        if (symbol.trailingSellPrice) {
+                                            const newTrailingSellPrice: number = fixDecimalPlaces(
+                                                (1 + Number(process.env.TRADING_TRAILING_SELL_BUMP_PCT)) * Number(Data.data.price), 20)
+                                            if (newTrailingSellPrice > symbol.trailingSellPrice) {
+                                                symbols[Data.subject].trailingSellPrice = newTrailingSellPrice
+                                            }
+                                        }
+
+                                        // Sell USDT transaction
+                                        if (Data.data.price < symbol.trailingSellPrice) {
+                                            sellUSDTTransaction(Data,time)
                                         }
                                     }
                                 }
@@ -210,6 +314,7 @@ const initialize = () => {
 
 // Program
 startServiceNotification();
+accountBalanceNotification(ACCOUNT_USDT_BALANCE, 'USDT')
 initialize();
 
 setInterval(() => {
