@@ -107,8 +107,8 @@ export const sellUSDTTransaction = (Data :{[p: string] : any}, time :number) => 
         sellProfitNotification(Data.subject, symbol.units, profit, 'USDT', profitPCT)
     } else {
         // Loss
-        const loss: number = 0;
-        const lossPCT: number = fixDecimalPlaces((symbol.amount - sellAmount) / symbol.amount, 8)
+        const loss: number = symbol.amount - sellAmount;
+        const lossPCT: number = fixDecimalPlaces(loss / symbol.amount, 8)
         sellLossNotification(Data.subject, symbol.units, loss, 'USDT', lossPCT)
     }
 
