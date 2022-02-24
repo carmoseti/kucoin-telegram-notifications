@@ -68,7 +68,7 @@ const symbols: {
 } = {}
 
 let ACCOUNT_USDT_BALANCE: number = 1000
-export const buyUSDTTransaction = (time :number,Data :{[p:string]:any}) => {
+export const buyUSDTTransaction = (time: number, Data: { [p: string]: any }) => {
     if (time > symbols[Data.subject].tradingMinimumTime &&
         ACCOUNT_USDT_BALANCE >= Number(process.env.TRADING_USDT_MIN_AMOUNT) &&
         !symbols[Data.subject].units
@@ -95,7 +95,7 @@ export const buyUSDTTransaction = (time :number,Data :{[p:string]:any}) => {
     }
 }
 
-export const sellUSDTTransaction = (Data :{[p: string] : any}, time :number) => {
+export const sellUSDTTransaction = (Data: { [p: string]: any }, time: number) => {
     const symbol = symbols[Data.subject];
     const sellAmount = fixDecimalPlaces(
         symbol.units * symbol.trailingSellPrice, 20
@@ -103,12 +103,12 @@ export const sellUSDTTransaction = (Data :{[p: string] : any}, time :number) => 
     if (sellAmount > symbol.amount) {
         // Profit
         const profit: number = sellAmount - symbol.amount;
-        const profitPCT: number = fixDecimalPlaces(profit / symbol.amount, 8)
+        const profitPCT: number = fixDecimalPlaces((profit / symbol.amount) * 100, 8)
         sellProfitNotification(Data.subject, symbol.units, profit, 'USDT', profitPCT)
     } else {
         // Loss
         const loss: number = symbol.amount - sellAmount;
-        const lossPCT: number = fixDecimalPlaces(loss / symbol.amount, 8)
+        const lossPCT: number = fixDecimalPlaces((loss / symbol.amount) * 100, 8)
         sellLossNotification(Data.subject, symbol.units, loss, 'USDT', lossPCT)
     }
 
@@ -245,7 +245,7 @@ const initialize = () => {
 
                                                 // Buy USDT transaction
                                                 if (quoteAsset === "USDT") {
-                                                    buyUSDTTransaction(time,Data)
+                                                    buyUSDTTransaction(time, Data)
                                                 }
                                             }
 
@@ -275,7 +275,7 @@ const initialize = () => {
 
                                         // Sell USDT transaction
                                         if (Data.data.price < symbol.trailingSellPrice) {
-                                            sellUSDTTransaction(Data,time)
+                                            sellUSDTTransaction(Data, time)
                                         }
                                     }
                                 }
