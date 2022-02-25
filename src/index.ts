@@ -4,8 +4,7 @@ import {tryCatchFinallyUtil} from "./utils/error";
 import WebSocket from "ws";
 import {fixDecimalPlaces} from "./utils/number";
 import {
-    accountBalanceNotification,
-    buySignalStrikeNotification,
+    accountBalanceNotification, buySignalStrikeNotification,
     buyUnitsNotification,
     sellLossNotification,
     sellProfitNotification,
@@ -84,7 +83,6 @@ export const buyUSDTTransaction = (time: number, Data: { [p: string]: any }) => 
         symbols[Data.subject].units = units
 
         buyUnitsNotification(Data.subject, units, buyPrice, 'USDT')
-
         symbols[Data.subject].trailingSellPriceIntervalId = setInterval(
             () => {
                 symbols[Data.subject].trailingSellPrice = fixDecimalPlaces(
@@ -92,6 +90,7 @@ export const buyUSDTTransaction = (time: number, Data: { [p: string]: any }) => 
                     symbols[Data.subject].trailingSellPrice, 20);
             }, 1000 * 60 * Number(process.env.TRADING_TRAILING_SELL_BUMP_INTERVAL_MINS)
         )
+        accountBalanceNotification(ACCOUNT_USDT_BALANCE, 'USDT')
     }
 }
 
@@ -104,12 +103,12 @@ export const sellUSDTTransaction = (Data: { [p: string]: any }, time: number) =>
         // Profit
         const profit: number = sellAmount - symbol.amount;
         const profitPCT: number = fixDecimalPlaces((profit / symbol.amount) * 100, 8)
-        sellProfitNotification(Data.subject, symbol.units, profit, 'USDT', profitPCT)
+        sellProfitNotification(Data.subject, symbol.units, symbol.trailingSellPrice, 'USDT', profit, profitPCT)
     } else {
         // Loss
         const loss: number = symbol.amount - sellAmount;
         const lossPCT: number = fixDecimalPlaces((loss / symbol.amount) * 100, 8)
-        sellLossNotification(Data.subject, symbol.units, loss, 'USDT', lossPCT)
+        sellLossNotification(Data.subject, symbol.units, symbol.trailingSellPrice, 'USDT', loss, lossPCT)
     }
 
     ACCOUNT_USDT_BALANCE += sellAmount
@@ -127,7 +126,6 @@ export const sellUSDTTransaction = (Data: { [p: string]: any }, time: number) =>
         trailingSellPriceIntervalId: undefined,
         units: 0
     }
-
     accountBalanceNotification(ACCOUNT_USDT_BALANCE, 'USDT')
 }
 
@@ -267,7 +265,7 @@ const initialize = () => {
                                         // Trail current price
                                         if (symbol.trailingSellPrice) {
                                             const newTrailingSellPrice: number = fixDecimalPlaces(
-                                                (1 + Number(process.env.TRADING_TRAILING_SELL_BUMP_PCT)) * Number(Data.data.price), 20)
+                                                (Number(process.env.TRADING_TRAILING_SELL_PCT)) * Number(Data.data.price), 20)
                                             if (newTrailingSellPrice > symbol.trailingSellPrice) {
                                                 symbols[Data.subject].trailingSellPrice = newTrailingSellPrice
                                             }

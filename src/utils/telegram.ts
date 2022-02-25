@@ -50,7 +50,7 @@ export const buyUnitsNotification = (symbol: string, units: number, price: numbe
     })
 }
 
-export const sellProfitNotification = (symbol: string, units: number, price: number, quoteAsset: string, percentage: number) => {
+export const sellProfitNotification = (symbol: string, units: number, price: number, quoteAsset: string, profit: number, percentage: number) => {
     const printUnits = units.toLocaleString(['en-UK', 'en-US'], {
         maximumFractionDigits: 20,
     })
@@ -59,13 +59,17 @@ export const sellProfitNotification = (symbol: string, units: number, price: num
         maximumFractionDigits: 20,
     })
 
+    const printProfit = profit.toLocaleString(['en-UK', 'en-US'], {
+        maximumFractionDigits: 4,
+    })
+
     const printPercentage = percentage.toLocaleString(['en-UK', 'en-US'], {
         maximumFractionDigits: 4,
     })
 
     axios.post(`${process.env.TELEGRAM_API_URL}/${process.env.TELEGRAM_BOT_TOKEN_SECRET}/sendMessage`, {
         chat_id: process.env.TELEGRAM_BOT_CHAT_ID,
-        text: `${process.env.USER_NAME}, <b>${printUnits} ${symbol.toUpperCase()}</b> sold at price <b>${printPrice} ${quoteAsset.replace("-", "")}</b>. PROFIT => <b>${printPercentage}%</b>`,
+        text: `${process.env.USER_NAME}, <b>${printUnits} ${symbol.toUpperCase()}</b> sold at price <b>${printPrice} ${quoteAsset.replace("-", "")}</b>. PROFIT => <b>${printProfit} ${quoteAsset.replace("-", "")}</b> at <b>${printPercentage}%</b>`,
         parse_mode: "HTML"
     }, {
         headers: {
@@ -74,7 +78,7 @@ export const sellProfitNotification = (symbol: string, units: number, price: num
     })
 }
 
-export const sellLossNotification = (symbol: string, units: number, price: number, quoteAsset: string, percentage: number) => {
+export const sellLossNotification = (symbol: string, units: number, price: number, quoteAsset: string, loss: number, percentage: number) => {
     const printUnits = units.toLocaleString(['en-UK', 'en-US'], {
         maximumFractionDigits: 20,
     })
@@ -83,13 +87,17 @@ export const sellLossNotification = (symbol: string, units: number, price: numbe
         maximumFractionDigits: 20,
     })
 
+    const printLoss = percentage.toLocaleString(['en-UK', 'en-US'], {
+        maximumFractionDigits: 4,
+    })
+
     const printPercentage = percentage.toLocaleString(['en-UK', 'en-US'], {
         maximumFractionDigits: 4,
     })
 
     axios.post(`${process.env.TELEGRAM_API_URL}/${process.env.TELEGRAM_BOT_TOKEN_SECRET}/sendMessage`, {
         chat_id: process.env.TELEGRAM_BOT_CHAT_ID,
-        text: `${process.env.USER_NAME}, <b>${printUnits} ${symbol.toUpperCase()}</b> sold at price <b>${printPrice} ${quoteAsset.replace("-", "")}</b>. LOSS => <b>${printPercentage}%</b>`,
+        text: `${process.env.USER_NAME}, <b>${printUnits} ${symbol.toUpperCase()}</b> sold at price <b>${printPrice} ${quoteAsset.replace("-", "")}</b>. LOSS => <b>${printLoss} ${quoteAsset.replace("-", "")}</b> at <b>${printPercentage}%</b>`,
         parse_mode: "HTML"
     }, {
         headers: {
@@ -98,7 +106,7 @@ export const sellLossNotification = (symbol: string, units: number, price: numbe
     })
 }
 
-export const accountBalanceNotification = (amount :number, currency :string) => {
+export const accountBalanceNotification = (amount: number, currency: string) => {
     const printAmount = amount.toLocaleString(['en-UK', 'en-US'], {
         maximumFractionDigits: 20,
     })
