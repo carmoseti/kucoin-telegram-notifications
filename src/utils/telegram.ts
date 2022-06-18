@@ -1,31 +1,57 @@
-import axios from "axios";
+import axios from "axios"
+import {tryCatchFinallyUtil} from "./error"
+import {logError} from "./log"
 
 export const startServiceNotification = () => {
-    axios.post(`${process.env.TELEGRAM_API_URL}/${process.env.TELEGRAM_BOT_TOKEN_SECRET}/sendMessage`, {
-        chat_id: process.env.TELEGRAM_BOT_CHAT_ID,
-        text: `Hello ${process.env.USER_NAME}. Notification service is starting...`,
-        parse_mode: "HTML"
-    }, {
-        headers: {
-            'Content-Type': 'application/json'
-        }
+    tryCatchFinallyUtil(() => {
+        axios.post(`${process.env.TELEGRAM_API_URL}/${process.env.TELEGRAM_BOT_TOKEN_SECRET}/sendMessage`, {
+            chat_id: process.env.TELEGRAM_BOT_CHAT_ID,
+            text: `Hello ${process.env.USER_NAME}. Notification service is starting...`,
+            parse_mode: "HTML"
+        }, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }, (e) => {
+        logError(`Telegram.startServiceNotification() ${e}`)
     })
 }
 
 export const buySignalStrikeNotification = (symbol: string, price: number, strikeCount: number, strikeUnitPCT: number, quoteAsset: string) => {
-    const printPrice = price.toLocaleString(['en-UK', 'en-US'], {
-        maximumFractionDigits: 20,
+    tryCatchFinallyUtil(() => {
+        const printPrice = price.toLocaleString(['en-UK', 'en-US'], {
+            maximumFractionDigits: 20,
+        })
+
+        const printStrikePCT: number = Math.floor(strikeUnitPCT * strikeCount * 100)
+
+        axios.post(`${process.env.TELEGRAM_API_URL}/${process.env.TELEGRAM_BOT_TOKEN_SECRET}/sendMessage`, {
+            chat_id: process.env.TELEGRAM_BOT_CHAT_ID,
+            text: `${process.env.USER_NAME}, Checkout this trading pair => <b>${symbol.toUpperCase()}</b> currently at price <b>${printPrice} ${quoteAsset.replace("-", "")}</b>. It could be PUMPING!!! Strike count => ${strikeCount}. Percentage increase => ${printStrikePCT}%`,
+            parse_mode: "HTML"
+        }, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }, (e) => {
+        logError(`Telegram.buySignalStrikeNotification() ${e}`)
     })
+}
 
-    const printStrikePCT: number = Math.floor(strikeUnitPCT * strikeCount * 100);
-
-    axios.post(`${process.env.TELEGRAM_API_URL}/${process.env.TELEGRAM_BOT_TOKEN_SECRET}/sendMessage`, {
-        chat_id: process.env.TELEGRAM_BOT_CHAT_ID,
-        text: `${process.env.USER_NAME}, Checkout this trading pair => <b>${symbol.toUpperCase()}</b> currently at price <b>${printPrice} ${quoteAsset.replace("-","")}</b>. It could be PUMPING!!! Strike count => ${strikeCount}. Percentage increase => ${printStrikePCT}%`,
-        parse_mode: "HTML"
-    }, {
-        headers: {
-            'Content-Type': 'application/json'
-        }
+export const sendApeInNotification = (symbol: string, percentageChange: number) => {
+    tryCatchFinallyUtil(() => {
+        axios.post(`${process.env.TELEGRAM_API_URL}/${process.env.TELEGRAM_APE_IN_BOT_TOKEN_SECRET}/sendMessage`, {
+            chat_id: process.env.TELEGRAM_BOT_CHAT_ID,
+            text: `&#128161; <b>KUCOIN</b>\n\nHello ${process.env.USER_NAME}\nCheckout <b>${symbol}</b> currently with percentage change: <b>${percentageChange}%</b> in the last 24hrs`,
+            parse_mode: "HTML"
+        }, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }, (e) => {
+        logError(`Telegram.sendApeInNotification() ${e}`)
     })
 }
