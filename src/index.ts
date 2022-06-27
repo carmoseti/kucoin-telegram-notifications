@@ -131,8 +131,9 @@ const notificationService = () => {
                 if (Data.subject === 'trade.snapshot') {
                     // Handle snapshot
                     const apeInParameters = symbols[Data.data.data.symbol]
-                    if (apeInParameters && ((Number(Data.data.data.changeRate) * 100) < apeInParameters.apeInPercentage)) {
-                        if (shouldNotify(Data.data.data.symbol)) sendApeInNotification(Data.data.data.symbol, Number(Data.data.data.changeRate) * 100)
+                    const percentChange :number = Math.round(((Number(Data.data.data.lastTradedPrice) - Number(Data.data.data.high))/Number(Data.data.data.high)) * 10000) / 100
+                    if (apeInParameters && (percentChange < apeInParameters.apeInPercentage)) {
+                        if (shouldNotify(Data.data.data.symbol)) sendApeInNotification(Data.data.data.symbol, percentChange)
 
                         // Set next percentage
                         apeInParameters.apeInPercentage = apeInParameters.apeInPercentage + Number(process.env.APE_IN_INCREMENT_PERCENTAGE)
