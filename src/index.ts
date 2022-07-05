@@ -132,7 +132,9 @@ const notificationService = () => {
                     // Handle snapshot
                     const apeInParameters = symbols[Data.data.data.symbol]
                     const percentChange :number = Math.round(((Number(Data.data.data.lastTradedPrice) - Number(Data.data.data.high))/Number(Data.data.data.high)) * 10000) / 100
-                    if (apeInParameters && (percentChange < apeInParameters.apeInPercentage)) {
+                    if (apeInParameters && (percentChange < apeInParameters.apeInPercentage) &&
+                        // Avoid false -100% notifications from new-listings
+                        percentChange !== 100) {
                         if (shouldNotify(Data.data.data.symbol)) sendApeInNotification(Data.data.data.symbol, percentChange)
 
                         // Set next percentage
