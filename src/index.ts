@@ -11,26 +11,11 @@ config()
 
 const SUPPORTED_QUOTE_ASSETS: string[] = String(process.env.KUCOIN_QUOTE_ASSETS).split(",")
 const getBaseAssetName = (tradingPair: string): string => {
-    let baseAssetName: string = tradingPair
-
-    // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < SUPPORTED_QUOTE_ASSETS.length; i++) {
-        if (tradingPair.startsWith(SUPPORTED_QUOTE_ASSETS[i])) {
-            return SUPPORTED_QUOTE_ASSETS[i]
-        }
-    }
-
-    SUPPORTED_QUOTE_ASSETS.forEach((quoteAsset: string) => {
-        baseAssetName = baseAssetName.replace(quoteAsset, '')
-    })
-    return baseAssetName
+    const regExp: RegExp = new RegExp(`^(\\w+)(` + SUPPORTED_QUOTE_ASSETS.join('|') + `)$`)
+    return tradingPair.replace(regExp, '$1')
 }
-const getQuoteAssetName = (tradingPair: string, baseAsset: string = ""): string => {
-    if (!baseAsset) {
-        return tradingPair.replace(getBaseAssetName(tradingPair), '')
-    } else {
-        return tradingPair.replace(baseAsset, '')
-    }
+const getQuoteAssetName = (tradingPair: string): string => {
+    return tradingPair.replace(getBaseAssetName(tradingPair), '')
 }
 const hasSupportedQuoteAsset = (tradingPair: string): boolean => {
     return SUPPORTED_QUOTE_ASSETS.reduce((previousValue, currentValue) => {
