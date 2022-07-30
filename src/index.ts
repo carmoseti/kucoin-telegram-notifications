@@ -171,7 +171,7 @@ const notificationService = () => {
 
                                 symbol = symbols[Data.subject]
                                 if (symbol.notificationStrikeCount > 1) {
-                                    if (shouldNotify(Data.subject)) buySignalStrikeNotification(Data.subject, Number(Data.data.price), symbol.notificationStrikeCount, Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT), getQuoteAssetName(Data.subject))
+                                    if (shouldNotify(Data.subject)) buySignalStrikeNotification(Data.subject, Number(Data.data.price), symbol.notificationStrikeCount, Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT), getQuoteAssetName(Data.subject).replace(process.env.KUCOIN_BASE_QUOTE_SEPARATOR, ""))
                                 }
 
                                 if (symbol.notificationStrikeTimeoutId) clearTimeout(symbol.notificationStrikeTimeoutId)
