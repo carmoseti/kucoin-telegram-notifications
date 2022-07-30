@@ -11,7 +11,7 @@ config()
 
 const SUPPORTED_QUOTE_ASSETS: string[] = String(process.env.KUCOIN_QUOTE_ASSETS).split(",")
 const getBaseAssetName = (tradingPair: string): string => {
-    const regExp: RegExp = new RegExp(`^(\\w+)(` + SUPPORTED_QUOTE_ASSETS.join('|') + `)$`)
+    const regExp: RegExp = new RegExp(`^(\\w+)`+String(process.env.KUCOIN_BASE_QUOTE_SEPARATOR)+`(` + SUPPORTED_QUOTE_ASSETS.join('|') + `)$`)
     return tradingPair.replace(regExp, '$1')
 }
 const getQuoteAssetName = (tradingPair: string): string => {
@@ -23,7 +23,7 @@ const hasSupportedQuoteAsset = (tradingPair: string): boolean => {
     }, false)
 }
 const shouldNotify = (symbol: string): boolean => {
-    const baseAsset: string = getBaseAssetName(symbol).replace(process.env.KUCOIN_BASE_QUOTE_SEPARATOR, "")
+    const baseAsset: string = getBaseAssetName(symbol)
     const quoteAsset: string = getQuoteAssetName(symbol).replace(process.env.KUCOIN_BASE_QUOTE_SEPARATOR, "")
     let notify: boolean = true
     let i: number = 0
