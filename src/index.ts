@@ -22,6 +22,8 @@ const hasSupportedQuoteAsset = (tradingPair: string): boolean => {
         return previousValue || (tradingPair.search(currentValue) !== -1 && tradingPair.endsWith(currentValue))
     }, false)
 }
+
+// TODO: Remove this and switch to subscribe/unsubscribe based method!!!
 const shouldNotify = (symbol: string): boolean => {
     const baseAsset: string = getBaseAssetName(symbol)
     const quoteAsset: string = getQuoteAssetName(symbol).replace(process.env.KUCOIN_BASE_QUOTE_SEPARATOR, "")
@@ -205,11 +207,11 @@ const notificationService = () => {
     }))
 
     webSocket.on('close', ((code, reason) => {
+        logError(`initialize() web socket onClose() : ${code} => ${reason}`)
         clearPingIntervalId()
-        if (code === 1006) { // ws.terminate()
-            webSocket = undefined
-            initialize()
-        }
+
+        webSocket = undefined
+        initialize()
     }))
 }
 
@@ -241,12 +243,3 @@ const initialize = () => {
 // Program
 startServiceNotification()
 initialize()
-
-setInterval(() => {
-    if (webSocket) {
-        webSocket.terminate()
-    } else {
-        initialize()
-    }
-
-}, 1000 * 60 * 60 * Number(process.env.KUCOIN_WEBSOCKET_FORCE_TERMINATE_HRS)) // Every 6hrs force terminate websocket connection
