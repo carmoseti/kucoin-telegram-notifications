@@ -1,0 +1,41 @@
+{
+  "type": "message",
+  "topic": "/market/snapshot:COCOS-USDT",
+  "subject": "trade.snapshot",
+  "data": {
+    "sequence": "11640809",
+    "data": {
+      "averagePrice": 0.65184629,
+      "baseCurrency": "COCOS",
+      "board": 0,
+      "buy": 0.6506,
+      "changePrice": -0.0031,
+      "changeRate": -0.0047,
+      "close": 0.6529,
+      "datetime": 1662193416481,
+      "high": 0.6616,
+      "lastTradedPrice": 0.6529,
+      "low": 0.6495,
+      "makerCoefficient": 1,
+      "makerFeeRate": 0.001,
+      "marginTrade": false,
+      "mark": 0,
+      "market": "USDS",
+      "markets": [
+        "USDS",
+        "NFT"
+      ],
+      "open": 0.656,
+      "quoteCurrency": "USDT",
+      "sell": 0.6549,
+      "sort": 100,
+      "symbol": "COCOS-USDT",
+      "symbolCode": "COCOS-USDT",
+      "takerCoefficient": 1,
+      "takerFeeRate": 0.001,
+      "trading": true,
+      "vol": 307977.1545,
+      "volValue": 201809.90146686
+    }
+  }
+}

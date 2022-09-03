@@ -1,0 +1,24 @@
+{
+  "code": "200000",
+  "data": [
+    {
+      "symbol": "REQ-ETH",
+      "name": "REQ-ETH",
+      "baseCurrency": "REQ",
+      "quoteCurrency": "ETH",
+      "feeCurrency": "ETH",
+      "market": "ALTS",
+      "baseMinSize": "1",
+      "quoteMinSize": "0.0001",
+      "baseMaxSize": "10000000000",
+      "quoteMaxSize": "99999999",
+      "baseIncrement": "0.0001",
+      "quoteIncrement": "0.00000001",
+      "priceIncrement": "0.00000001",
+      "priceLimitRate": "0.1",
+      "minFunds": "0.00001",
+      "isMarginEnabled": false,
+      "enableTrading": true
+    }
+  ]
+}

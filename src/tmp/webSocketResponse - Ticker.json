@@ -1,0 +1,15 @@
+{
+  "type": "message",
+  "topic": "/market/ticker:CQT-USDT",
+  "subject": "trade.ticker",
+  "data": {
+    "bestAsk": "0.0685",
+    "bestAskSize": "2242.8589",
+    "bestBid": "0.0684",
+    "bestBidSize": "76.8496",
+    "price": "0.0685",
+    "sequence": "6791946",
+    "size": "1.4824",
+    "time": 1662191791235
+  }
+}

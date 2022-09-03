@@ -1,0 +1,3058 @@
+{
+  "REQ": {
+    "webSocketConnectionId": "",
+    "symbol": "REQ-USDT"
+  },
+  "BSV": {
+    "webSocketConnectionId": "",
+    "symbol": "BCHSV-USDT"
+  },
+  "POWR": {
+    "webSocketConnectionId": "",
+    "symbol": "POWR-USDT"
+  },
+  "KNC": {
+    "webSocketConnectionId": "",
+    "symbol": "KNC-USDT"
+  },
+  "OMG": {
+    "webSocketConnectionId": "",
+    "symbol": "OMG-USDT"
+  },
+  "MANA": {
+    "webSocketConnectionId": "",
+    "symbol": "MANA-USDT"
+  },
+  "ETN": {
+    "webSocketConnectionId": "",
+    "symbol": "ETN-USDT"
+  },
+  "DGB": {
+    "webSocketConnectionId": "",
+    "symbol": "DGB-USDT"
+  },
+  "ENJ": {
+    "webSocketConnectionId": "",
+    "symbol": "ENJ-USDT"
+  },
+  "SNX": {
+    "webSocketConnectionId": "",
+    "symbol": "SNX-USDT"
+  },
+  "TIME": {
+    "webSocketConnectionId": "",
+    "symbol": "TIME-USDT"
+  },
+  "XLM": {
+    "webSocketConnectionId": "",
+    "symbol": "XLM-USDT"
+  },
+  "VET": {
+    "webSocketConnectionId": "",
+    "symbol": "VET-USDT"
+  },
+  "DASH": {
+    "webSocketConnectionId": "",
+    "symbol": "DASH-USDT"
+  },
+  "GO": {
+    "webSocketConnectionId": "",
+    "symbol": "GO-USDT"
+  },
+  "EOS": {
+    "webSocketConnectionId": "",
+    "symbol": "EOS-USDT"
+  },
+  "ETC": {
+    "webSocketConnectionId": "",
+    "symbol": "ETC-USDT"
+  },
+  "GAS": {
+    "webSocketConnectionId": "",
+    "symbol": "GAS-USDT"
+  },
+  "BCH": {
+    "webSocketConnectionId": "",
+    "symbol": "BCH-USDT"
+  },
+  "LTC": {
+    "webSocketConnectionId": "",
+    "symbol": "LTC-USDT"
+  },
+  "IOST": {
+    "webSocketConnectionId": "",
+    "symbol": "IOST-USDT"
+  },
+  "TEL": {
+    "webSocketConnectionId": "",
+    "symbol": "TEL-USDT"
+  },
+  "WAXP": {
+    "webSocketConnectionId": "",
+    "symbol": "WAX-USDT"
+  },
+  "COV": {
+    "webSocketConnectionId": "",
+    "symbol": "COV-USDT"
+  },
+  "ZIL": {
+    "webSocketConnectionId": "",
+    "symbol": "ZIL-USDT"
+  },
+  "MAN": {
+    "webSocketConnectionId": "",
+    "symbol": "MAN-USDT"
+  },
+  "TOMO": {
+    "webSocketConnectionId": "",
+    "symbol": "TOMO-USDT"
+  },
+  "ONT": {
+    "webSocketConnectionId": "",
+    "symbol": "ONT-USDT"
+  },
+  "BAX": {
+    "webSocketConnectionId": "",
+    "symbol": "BAX-USDT"
+  },
+  "LYM": {
+    "webSocketConnectionId": "",
+    "symbol": "LYM-USDT"
+  },
+  "IOTX": {
+    "webSocketConnectionId": "",
+    "symbol": "IOTX-USDT"
+  },
+  "SOUL": {
+    "webSocketConnectionId": "",
+    "symbol": "SOUL-USDT"
+  },
+  "AOA": {
+    "webSocketConnectionId": "",
+    "symbol": "AOA-USDT"
+  },
+  "DAG": {
+    "webSocketConnectionId": "",
+    "symbol": "DAG-USDT"
+  },
+  "SUSD": {
+    "webSocketConnectionId": "",
+    "symbol": "SUSD-USDT"
+  },
+  "ELA": {
+    "webSocketConnectionId": "",
+    "symbol": "ELA-USDT"
+  },
+  "CBC": {
+    "webSocketConnectionId": "",
+    "symbol": "CBC-USDT"
+  },
+  "TRX": {
+    "webSocketConnectionId": "",
+    "symbol": "TRX-USDT"
+  },
+  "CRPT": {
+    "webSocketConnectionId": "",
+    "symbol": "CRPT-USDT"
+  },
+  "KCS": {
+    "webSocketConnectionId": "",
+    "symbol": "KCS-USDT"
+  },
+  "NEO": {
+    "webSocketConnectionId": "",
+    "symbol": "NEO-USDT"
+  },
+  "ETH": {
+    "webSocketConnectionId": "",
+    "symbol": "ETH-USDT"
+  },
+  "BTC": {
+    "webSocketConnectionId": "",
+    "symbol": "BTC-USDT"
+  },
+  "MHC": {
+    "webSocketConnectionId": "",
+    "symbol": "MHC-USDT"
+  },
+  "OXEN": {
+    "webSocketConnectionId": "",
+    "symbol": "LOKI-USDT"
+  },
+  "AVA": {
+    "webSocketConnectionId": "",
+    "symbol": "AVA-USDT"
+  },
+  "ANKR": {
+    "webSocketConnectionId": "",
+    "symbol": "ANKR-USDT"
+  },
+  "XMR": {
+    "webSocketConnectionId": "",
+    "symbol": "XMR-USDT"
+  },
+  "MTV": {
+    "webSocketConnectionId": "",
+    "symbol": "MTV-USDT"
+  },
+  "CRO": {
+    "webSocketConnectionId": "",
+    "symbol": "CRO-USDT"
+  },
+  "KMD": {
+    "webSocketConnectionId": "",
+    "symbol": "KMD-USDT"
+  },
+  "RFOX": {
+    "webSocketConnectionId": "",
+    "symbol": "RFOX-USDT"
+  },
+  "AERGO": {
+    "webSocketConnectionId": "",
+    "symbol": "AERGO-USDT"
+  },
+  "ATOM": {
+    "webSocketConnectionId": "",
+    "symbol": "ATOM-USDT"
+  },
+  "FTM": {
+    "webSocketConnectionId": "",
+    "symbol": "FTM-USDT"
+  },
+  "VSYS": {
+    "webSocketConnectionId": "",
+    "symbol": "VSYS-USDT"
+  },
+  "OCEAN": {
+    "webSocketConnectionId": "",
+    "symbol": "OCEAN-USDT"
+  },
+  "CHR": {
+    "webSocketConnectionId": "",
+    "symbol": "CHR-USDT"
+  },
+  "NIM": {
+    "webSocketConnectionId": "",
+    "symbol": "NIM-USDT"
+  },
+  "COTI": {
+    "webSocketConnectionId": "",
+    "symbol": "COTI-USDT"
+  },
+  "BNB": {
+    "webSocketConnectionId": "",
+    "symbol": "BNB-USDT"
+  },
+  "JAR": {
+    "webSocketConnectionId": "",
+    "symbol": "JAR-USDT"
+  },
+  "ALGO": {
+    "webSocketConnectionId": "",
+    "symbol": "ALGO-USDT"
+  },
+  "XEM": {
+    "webSocketConnectionId": "",
+    "symbol": "XEM-USDT"
+  },
+  "CIX100": {
+    "webSocketConnectionId": "",
+    "symbol": "CIX100-USDT"
+  },
+  "XTZ": {
+    "webSocketConnectionId": "",
+    "symbol": "XTZ-USDT"
+  },
+  "ZEC": {
+    "webSocketConnectionId": "",
+    "symbol": "ZEC-USDT"
+  },
+  "ADA": {
+    "webSocketConnectionId": "",
+    "symbol": "ADA-USDT"
+  },
+  "REV": {
+    "webSocketConnectionId": "",
+    "symbol": "R-USDT"
+  },
+  "WXT": {
+    "webSocketConnectionId": "",
+    "symbol": "WXT-USDT"
+  },
+  "FORESTPLUS": {
+    "webSocketConnectionId": "",
+    "symbol": "FORESTPLUS-USDT"
+  },
+  "BOLT": {
+    "webSocketConnectionId": "",
+    "symbol": "BOLT-USDT"
+  },
+  "ARPA": {
+    "webSocketConnectionId": "",
+    "symbol": "ARPA-USDT"
+  },
+  "CHZ": {
+    "webSocketConnectionId": "",
+    "symbol": "CHZ-USDT"
+  },
+  "DAPPT": {
+    "webSocketConnectionId": "",
+    "symbol": "DAPPT-USDT"
+  },
+  "NOIA": {
+    "webSocketConnectionId": "",
+    "symbol": "NOIA-USDT"
+  },
+  "WIN": {
+    "webSocketConnectionId": "",
+    "symbol": "WIN-USDT"
+  },
+  "DERO": {
+    "webSocketConnectionId": "",
+    "symbol": "DERO-USDT"
+  },
+  "BTT": {
+    "webSocketConnectionId": "",
+    "symbol": "BTT-USDT"
+  },
+  "EOSC": {
+    "webSocketConnectionId": "",
+    "symbol": "EOSC-USDT"
+  },
+  "ENQ": {
+    "webSocketConnectionId": "",
+    "symbol": "ENQ-USDT"
+  },
+  "ONE": {
+    "webSocketConnectionId": "",
+    "symbol": "ONE-USDT"
+  },
+  "TOKO": {
+    "webSocketConnectionId": "",
+    "symbol": "TOKO-USDT"
+  },
+  "VID": {
+    "webSocketConnectionId": "",
+    "symbol": "VID-USDT"
+  },
+  "LUNA": {
+    "webSocketConnectionId": "",
+    "symbol": "LUNA-USDT"
+  },
+  "MXW": {
+    "webSocketConnectionId": "",
+    "symbol": "MXW-USDT"
+  },
+  "SXP": {
+    "webSocketConnectionId": "",
+    "symbol": "SXP-USDT"
+  },
+  "VIDT": {
+    "webSocketConnectionId": "",
+    "symbol": "VIDT-USDT"
+  },
+  "AKRO": {
+    "webSocketConnectionId": "",
+    "symbol": "AKRO-USDT"
+  },
+  "MAP": {
+    "webSocketConnectionId": "",
+    "symbol": "MAP-USDT"
+  },
+  "AMPL": {
+    "webSocketConnectionId": "",
+    "symbol": "AMPL-USDT"
+  },
+  "POL": {
+    "webSocketConnectionId": "",
+    "symbol": "POL-USDT"
+  },
+  "ARX": {
+    "webSocketConnectionId": "",
+    "symbol": "ARX-USDT"
+  },
+  "NWC": {
+    "webSocketConnectionId": "",
+    "symbol": "NWC-USDT"
+  },
+  "BEPRO": {
+    "webSocketConnectionId": "",
+    "symbol": "BEPRO-USDT"
+  },
+  "VRA": {
+    "webSocketConnectionId": "",
+    "symbol": "VRA-USDT"
+  },
+  "KSM": {
+    "webSocketConnectionId": "",
+    "symbol": "KSM-USDT"
+  },
+  "SUTER": {
+    "webSocketConnectionId": "",
+    "symbol": "SUTER-USDT"
+  },
+  "ACOIN": {
+    "webSocketConnectionId": "",
+    "symbol": "ACOIN-USDT"
+  },
+  "SENSO": {
+    "webSocketConnectionId": "",
+    "symbol": "SENSO-USDT"
+  },
+  "PRE": {
+    "webSocketConnectionId": "",
+    "symbol": "PRE-USDT"
+  },
+  "XDB": {
+    "webSocketConnectionId": "",
+    "symbol": "XDB-USDT"
+  },
+  "SYLO": {
+    "webSocketConnectionId": "",
+    "symbol": "SYLO-USDT"
+  },
+  "WOM": {
+    "webSocketConnectionId": "",
+    "symbol": "WOM-USDT"
+  },
+  "LYXe": {
+    "webSocketConnectionId": "",
+    "symbol": "LYXE-USDT"
+  },
+  "STX": {
+    "webSocketConnectionId": "",
+    "symbol": "STX-USDT"
+  },
+  "USDN": {
+    "webSocketConnectionId": "",
+    "symbol": "USDN-USDT"
+  },
+  "XSR": {
+    "webSocketConnectionId": "",
+    "symbol": "XSR-USDT"
+  },
+  "COMP": {
+    "webSocketConnectionId": "",
+    "symbol": "COMP-USDT"
+  },
+  "KAI": {
+    "webSocketConnectionId": "",
+    "symbol": "KAI-USDT"
+  },
+  "WEST": {
+    "webSocketConnectionId": "",
+    "symbol": "WEST-USDT"
+  },
+  "EWT": {
+    "webSocketConnectionId": "",
+    "symbol": "EWT-USDT"
+  },
+  "WAVES": {
+    "webSocketConnectionId": "",
+    "symbol": "WAVES-USDT"
+  },
+  "ORN": {
+    "webSocketConnectionId": "",
+    "symbol": "ORN-USDT"
+  },
+  "BNS": {
+    "webSocketConnectionId": "",
+    "symbol": "BNS-USDT"
+  },
+  "MKR": {
+    "webSocketConnectionId": "",
+    "symbol": "MKR-USDT"
+  },
+  "SUKU": {
+    "webSocketConnectionId": "",
+    "symbol": "SUKU-USDT"
+  },
+  "MLK": {
+    "webSocketConnectionId": "",
+    "symbol": "MLK-USDT"
+  },
+  "JST": {
+    "webSocketConnectionId": "",
+    "symbol": "JST-USDT"
+  },
+  "DIA": {
+    "webSocketConnectionId": "",
+    "symbol": "DIA-USDT"
+  },
+  "LINK": {
+    "webSocketConnectionId": "",
+    "symbol": "LINK-USDT"
+  },
+  "DOT": {
+    "webSocketConnectionId": "",
+    "symbol": "DOT-USDT"
+  },
+  "SHA": {
+    "webSocketConnectionId": "",
+    "symbol": "SHA-USDT"
+  },
+  "USDJ": {
+    "webSocketConnectionId": "",
+    "symbol": "USDJ-USDT"
+  },
+  "EFX": {
+    "webSocketConnectionId": "",
+    "symbol": "EFX-USDT"
+  },
+  "CKB": {
+    "webSocketConnectionId": "",
+    "symbol": "CKB-USDT"
+  },
+  "UMA": {
+    "webSocketConnectionId": "",
+    "symbol": "UMA-USDT"
+  },
+  "ALEPH": {
+    "webSocketConnectionId": "",
+    "symbol": "ALEPH-USDT"
+  },
+  "VELO": {
+    "webSocketConnectionId": "",
+    "symbol": "VELO-USDT"
+  },
+  "SUN": {
+    "webSocketConnectionId": "",
+    "symbol": "SUN-USDT"
+  },
+  "BUY": {
+    "webSocketConnectionId": "",
+    "symbol": "BUY-USDT"
+  },
+  "YFI": {
+    "webSocketConnectionId": "",
+    "symbol": "YFI-USDT"
+  },
+  "UNI": {
+    "webSocketConnectionId": "",
+    "symbol": "UNI-USDT"
+  },
+  "UOS": {
+    "webSocketConnectionId": "",
+    "symbol": "UOS-USDT"
+  },
+  "DEGO": {
+    "webSocketConnectionId": "",
+    "symbol": "DEGO-USDT"
+  },
+  "RFUEL": {
+    "webSocketConnectionId": "",
+    "symbol": "RFUEL-USDT"
+  },
+  "FIL": {
+    "webSocketConnectionId": "",
+    "symbol": "FIL-USDT"
+  },
+  "UBX": {
+    "webSocketConnectionId": "",
+    "symbol": "UBX-USDT"
+  },
+  "REAP": {
+    "webSocketConnectionId": "",
+    "symbol": "REAP-USDT"
+  },
+  "AAVE": {
+    "webSocketConnectionId": "",
+    "symbol": "AAVE-USDT"
+  },
+  "TONE": {
+    "webSocketConnectionId": "",
+    "symbol": "TONE-USDT"
+  },
+  "OPCT": {
+    "webSocketConnectionId": "",
+    "symbol": "OPCT-USDT"
+  },
+  "COMB": {
+    "webSocketConnectionId": "",
+    "symbol": "COMB-USDT"
+  },
+  "SHR": {
+    "webSocketConnectionId": "",
+    "symbol": "SHR-USDT"
+  },
+  "UBXT": {
+    "webSocketConnectionId": "",
+    "symbol": "UBXT-USDT"
+  },
+  "ROSE": {
+    "webSocketConnectionId": "",
+    "symbol": "ROSE-USDT"
+  },
+  "USDC": {
+    "webSocketConnectionId": "",
+    "symbol": "USDC-USDT"
+  },
+  "CTI": {
+    "webSocketConnectionId": "",
+    "symbol": "CTI-USDT"
+  },
+  "BUX": {
+    "webSocketConnectionId": "",
+    "symbol": "BUX-USDT"
+  },
+  "XHV": {
+    "webSocketConnectionId": "",
+    "symbol": "XHV-USDT"
+  },
+  "PLU": {
+    "webSocketConnectionId": "",
+    "symbol": "PLU-USDT"
+  },
+  "GRT": {
+    "webSocketConnectionId": "",
+    "symbol": "GRT-USDT"
+  },
+  "CAS": {
+    "webSocketConnectionId": "",
+    "symbol": "CAS-USDT"
+  },
+  "MSWAP": {
+    "webSocketConnectionId": "",
+    "symbol": "MSWAP-USDT"
+  },
+  "GOM2": {
+    "webSocketConnectionId": "",
+    "symbol": "GOM2-USDT"
+  },
+  "REVV": {
+    "webSocketConnectionId": "",
+    "symbol": "REVV-USDT"
+  },
+  "LON": {
+    "webSocketConnectionId": "",
+    "symbol": "LON-USDT"
+  },
+  "1INCH": {
+    "webSocketConnectionId": "",
+    "symbol": "1INCH-USDT"
+  },
+  "LOC": {
+    "webSocketConnectionId": "",
+    "symbol": "LOC-USDT"
+  },
+  "API3": {
+    "webSocketConnectionId": "",
+    "symbol": "API3-USDT"
+  },
+  "UNFI": {
+    "webSocketConnectionId": "",
+    "symbol": "UNFI-USDT"
+  },
+  "HTR": {
+    "webSocketConnectionId": "",
+    "symbol": "HTR-USDT"
+  },
+  "FRONT": {
+    "webSocketConnectionId": "",
+    "symbol": "FRONT-USDT"
+  },
+  "MIR": {
+    "webSocketConnectionId": "",
+    "symbol": "MIR-USDT"
+  },
+  "HYDRA": {
+    "webSocketConnectionId": "",
+    "symbol": "HYDRA-USDT"
+  },
+  "DFI": {
+    "webSocketConnectionId": "",
+    "symbol": "DFI-USDT"
+  },
+  "CRV": {
+    "webSocketConnectionId": "",
+    "symbol": "CRV-USDT"
+  },
+  "SUSHI": {
+    "webSocketConnectionId": "",
+    "symbol": "SUSHI-USDT"
+  },
+  "FRM": {
+    "webSocketConnectionId": "",
+    "symbol": "FRM-USDT"
+  },
+  "ZEN": {
+    "webSocketConnectionId": "",
+    "symbol": "ZEN-USDT"
+  },
+  "CUDOS": {
+    "webSocketConnectionId": "",
+    "symbol": "CUDOS-USDT"
+  },
+  "REN": {
+    "webSocketConnectionId": "",
+    "symbol": "REN-USDT"
+  },
+  "LRC": {
+    "webSocketConnectionId": "",
+    "symbol": "LRC-USDT"
+  },
+  "KLV": {
+    "webSocketConnectionId": "",
+    "symbol": "KLV-USDT"
+  },
+  "BOA": {
+    "webSocketConnectionId": "",
+    "symbol": "BOA-USDT"
+  },
+  "THETA": {
+    "webSocketConnectionId": "",
+    "symbol": "THETA-USDT"
+  },
+  "QNT": {
+    "webSocketConnectionId": "",
+    "symbol": "QNT-USDT"
+  },
+  "BAT": {
+    "webSocketConnectionId": "",
+    "symbol": "BAT-USDT"
+  },
+  "DOGE": {
+    "webSocketConnectionId": "",
+    "symbol": "DOGE-USDT"
+  },
+  "DAO": {
+    "webSocketConnectionId": "",
+    "symbol": "DAO-USDT"
+  },
+  "STRONG": {
+    "webSocketConnectionId": "",
+    "symbol": "STRONG-USDT"
+  },
+  "TRIAS": {
+    "webSocketConnectionId": "",
+    "symbol": "TRIAS-USDT"
+  },
+  "MITX": {
+    "webSocketConnectionId": "",
+    "symbol": "MITX-USDT"
+  },
+  "CAKE": {
+    "webSocketConnectionId": "",
+    "symbol": "CAKE-USDT"
+  },
+  "ORAI": {
+    "webSocketConnectionId": "",
+    "symbol": "ORAI-USDT"
+  },
+  "ZEE": {
+    "webSocketConnectionId": "",
+    "symbol": "ZEE-USDT"
+  },
+  "LTX": {
+    "webSocketConnectionId": "",
+    "symbol": "LTX-USDT"
+  },
+  "MASK": {
+    "webSocketConnectionId": "",
+    "symbol": "MASK-USDT"
+  },
+  "IDEA": {
+    "webSocketConnectionId": "",
+    "symbol": "IDEA-USDT"
+  },
+  "PHA": {
+    "webSocketConnectionId": "",
+    "symbol": "PHA-USDT"
+  },
+  "SRK": {
+    "webSocketConnectionId": "",
+    "symbol": "SRK-USDT"
+  },
+  "SWINGBY": {
+    "webSocketConnectionId": "",
+    "symbol": "SWINGBY-USDT"
+  },
+  "AVAX": {
+    "webSocketConnectionId": "",
+    "symbol": "AVAX-USDT"
+  },
+  "KRL": {
+    "webSocketConnectionId": "",
+    "symbol": "KRL-USDT"
+  },
+  "POLK": {
+    "webSocketConnectionId": "",
+    "symbol": "POLK-USDT"
+  },
+  "RNDR": {
+    "webSocketConnectionId": "",
+    "symbol": "RNDR-USDT"
+  },
+  "RLY": {
+    "webSocketConnectionId": "",
+    "symbol": "RLY-USDT"
+  },
+  "ANC": {
+    "webSocketConnectionId": "",
+    "symbol": "ANC-USDT"
+  },
+  "SKEY": {
+    "webSocketConnectionId": "",
+    "symbol": "SKEY-USDT"
+  },
+  "LAYER": {
+    "webSocketConnectionId": "",
+    "symbol": "LAYER-USDT"
+  },
+  "TARA": {
+    "webSocketConnectionId": "",
+    "symbol": "TARA-USDT"
+  },
+  "DYP": {
+    "webSocketConnectionId": "",
+    "symbol": "DYP-USDT"
+  },
+  "XYM": {
+    "webSocketConnectionId": "",
+    "symbol": "XYM-USDT"
+  },
+  "PCX": {
+    "webSocketConnectionId": "",
+    "symbol": "PCX-USDT"
+  },
+  "ORBS": {
+    "webSocketConnectionId": "",
+    "symbol": "ORBS-USDT"
+  },
+  "BTC3L": {
+    "webSocketConnectionId": "",
+    "symbol": "BTC3L-USDT"
+  },
+  "BTC3S": {
+    "webSocketConnectionId": "",
+    "symbol": "BTC3S-USDT"
+  },
+  "ETH3L": {
+    "webSocketConnectionId": "",
+    "symbol": "ETH3L-USDT"
+  },
+  "ETH3S": {
+    "webSocketConnectionId": "",
+    "symbol": "ETH3S-USDT"
+  },
+  "DSLA": {
+    "webSocketConnectionId": "",
+    "symbol": "DSLA-USDT"
+  },
+  "SPI": {
+    "webSocketConnectionId": "",
+    "symbol": "SPI-USDT"
+  },
+  "SAND": {
+    "webSocketConnectionId": "",
+    "symbol": "SAND-USDT"
+  },
+  "VAI": {
+    "webSocketConnectionId": "",
+    "symbol": "VAI-USDT"
+  },
+  "XCUR": {
+    "webSocketConnectionId": "",
+    "symbol": "XCUR-USDT"
+  },
+  "FLUX": {
+    "webSocketConnectionId": "",
+    "symbol": "FLUX-USDT"
+  },
+  "DODO": {
+    "webSocketConnectionId": "",
+    "symbol": "DODO-USDT"
+  },
+  "BOSON": {
+    "webSocketConnectionId": "",
+    "symbol": "BOSON-USDT"
+  },
+  "PUNDIX": {
+    "webSocketConnectionId": "",
+    "symbol": "PUNDIX-USDT"
+  },
+  "HT": {
+    "webSocketConnectionId": "",
+    "symbol": "HT-USDT"
+  },
+  "PDEX": {
+    "webSocketConnectionId": "",
+    "symbol": "PDEX-USDT"
+  },
+  "LABS": {
+    "webSocketConnectionId": "",
+    "symbol": "LABS-USDT"
+  },
+  "GMB": {
+    "webSocketConnectionId": "",
+    "symbol": "GMB-USDT"
+  },
+  "PHNX": {
+    "webSocketConnectionId": "",
+    "symbol": "PHNX-USDT"
+  },
+  "HAI": {
+    "webSocketConnectionId": "",
+    "symbol": "HAI-USDT"
+  },
+  "EQZ": {
+    "webSocketConnectionId": "",
+    "symbol": "EQZ-USDT"
+  },
+  "FORTH": {
+    "webSocketConnectionId": "",
+    "symbol": "FORTH-USDT"
+  },
+  "HORD": {
+    "webSocketConnectionId": "",
+    "symbol": "HORD-USDT"
+  },
+  "CGG": {
+    "webSocketConnectionId": "",
+    "symbol": "CGG-USDT"
+  },
+  "GHX": {
+    "webSocketConnectionId": "",
+    "symbol": "GHX-USDT"
+  },
+  "TCP": {
+    "webSocketConnectionId": "",
+    "symbol": "TCP-USDT"
+  },
+  "STND": {
+    "webSocketConnectionId": "",
+    "symbol": "STND-USDT"
+  },
+  "TOWER": {
+    "webSocketConnectionId": "",
+    "symbol": "TOWER-USDT"
+  },
+  "ACE": {
+    "webSocketConnectionId": "",
+    "symbol": "ACE-USDT"
+  },
+  "LOCG": {
+    "webSocketConnectionId": "",
+    "symbol": "LOCG-USDT"
+  },
+  "CARD": {
+    "webSocketConnectionId": "",
+    "symbol": "CARD-USDT"
+  },
+  "FLy": {
+    "webSocketConnectionId": "",
+    "symbol": "FLY-USDT"
+  },
+  "CWS": {
+    "webSocketConnectionId": "",
+    "symbol": "CWS-USDT"
+  },
+  "XDC": {
+    "webSocketConnectionId": "",
+    "symbol": "XDC-USDT"
+  },
+  "SHIB": {
+    "webSocketConnectionId": "",
+    "symbol": "SHIB-USDT"
+  },
+  "POLX": {
+    "webSocketConnectionId": "",
+    "symbol": "POLX-USDT"
+  },
+  "KDA": {
+    "webSocketConnectionId": "",
+    "symbol": "KDA-USDT"
+  },
+  "ICP": {
+    "webSocketConnectionId": "",
+    "symbol": "ICP-USDT"
+  },
+  "STC": {
+    "webSocketConnectionId": "",
+    "symbol": "STC-USDT"
+  },
+  "GOVI": {
+    "webSocketConnectionId": "",
+    "symbol": "GOVI-USDT"
+  },
+  "FKX": {
+    "webSocketConnectionId": "",
+    "symbol": "FKX-USDT"
+  },
+  "CELO": {
+    "webSocketConnectionId": "",
+    "symbol": "CELO-USDT"
+  },
+  "cUSD": {
+    "webSocketConnectionId": "",
+    "symbol": "CUSD-USDT"
+  },
+  "FCL": {
+    "webSocketConnectionId": "",
+    "symbol": "FCL-USDT"
+  },
+  "MATIC": {
+    "webSocketConnectionId": "",
+    "symbol": "MATIC-USDT"
+  },
+  "OGN": {
+    "webSocketConnectionId": "",
+    "symbol": "OGN-USDT"
+  },
+  "OUSD": {
+    "webSocketConnectionId": "",
+    "symbol": "OUSD-USDT"
+  },
+  "TLOS": {
+    "webSocketConnectionId": "",
+    "symbol": "TLOS-USDT"
+  },
+  "YOP": {
+    "webSocketConnectionId": "",
+    "symbol": "YOP-USDT"
+  },
+  "GLQ": {
+    "webSocketConnectionId": "",
+    "symbol": "GLQ-USDT"
+  },
+  "MXC": {
+    "webSocketConnectionId": "",
+    "symbol": "MXC-USDT"
+  },
+  "ERSDL": {
+    "webSocketConnectionId": "",
+    "symbol": "ERSDL-USDT"
+  },
+  "HOTCROSS": {
+    "webSocketConnectionId": "",
+    "symbol": "HOTCROSS-USDT"
+  },
+  "ADA3L": {
+    "webSocketConnectionId": "",
+    "symbol": "ADA3L-USDT"
+  },
+  "ADA3S": {
+    "webSocketConnectionId": "",
+    "symbol": "ADA3S-USDT"
+  },
+  "HYVE": {
+    "webSocketConnectionId": "",
+    "symbol": "HYVE-USDT"
+  },
+  "DAPPX": {
+    "webSocketConnectionId": "",
+    "symbol": "DAPPX-USDT"
+  },
+  "KONO": {
+    "webSocketConnectionId": "",
+    "symbol": "KONO-USDT"
+  },
+  "PRQ": {
+    "webSocketConnectionId": "",
+    "symbol": "PRQ-USDT"
+  },
+  "MAHA": {
+    "webSocketConnectionId": "",
+    "symbol": "MAHA-USDT"
+  },
+  "FEAR": {
+    "webSocketConnectionId": "",
+    "symbol": "FEAR-USDT"
+  },
+  "PYR": {
+    "webSocketConnectionId": "",
+    "symbol": "PYR-USDT"
+  },
+  "PROM": {
+    "webSocketConnectionId": "",
+    "symbol": "PROM-USDT"
+  },
+  "GLCH": {
+    "webSocketConnectionId": "",
+    "symbol": "GLCH-USDT"
+  },
+  "UNO": {
+    "webSocketConnectionId": "",
+    "symbol": "UNO-USDT"
+  },
+  "ALBT": {
+    "webSocketConnectionId": "",
+    "symbol": "ALBT-USDT"
+  },
+  "XCAD": {
+    "webSocketConnectionId": "",
+    "symbol": "XCAD-USDT"
+  },
+  "EOS3L": {
+    "webSocketConnectionId": "",
+    "symbol": "EOS3L-USDT"
+  },
+  "EOS3S": {
+    "webSocketConnectionId": "",
+    "symbol": "EOS3S-USDT"
+  },
+  "BCH3L": {
+    "webSocketConnectionId": "",
+    "symbol": "BCH3L-USDT"
+  },
+  "BCH3S": {
+    "webSocketConnectionId": "",
+    "symbol": "BCH3S-USDT"
+  },
+  "ELON": {
+    "webSocketConnectionId": "",
+    "symbol": "ELON-USDT"
+  },
+  "APL": {
+    "webSocketConnectionId": "",
+    "symbol": "APL-USDT"
+  },
+  "VEED": {
+    "webSocketConnectionId": "",
+    "symbol": "VEED-USDT"
+  },
+  "DIVI": {
+    "webSocketConnectionId": "",
+    "symbol": "DIVI-USDT"
+  },
+  "JUP": {
+    "webSocketConnectionId": "",
+    "symbol": "JUP-USDT"
+  },
+  "POLS": {
+    "webSocketConnectionId": "",
+    "symbol": "POLS-USDT"
+  },
+  "LPOOL": {
+    "webSocketConnectionId": "",
+    "symbol": "LPOOL-USDT"
+  },
+  "LSS": {
+    "webSocketConnectionId": "",
+    "symbol": "LSS-USDT"
+  },
+  "VET3L": {
+    "webSocketConnectionId": "",
+    "symbol": "VET3L-USDT"
+  },
+  "VET3S": {
+    "webSocketConnectionId": "",
+    "symbol": "VET3S-USDT"
+  },
+  "LTC3L": {
+    "webSocketConnectionId": "",
+    "symbol": "LTC3L-USDT"
+  },
+  "LTC3S": {
+    "webSocketConnectionId": "",
+    "symbol": "LTC3S-USDT"
+  },
+  "ETHO": {
+    "webSocketConnectionId": "",
+    "symbol": "ETHO-USDT"
+  },
+  "ABBC": {
+    "webSocketConnectionId": "",
+    "symbol": "ABBC-USDT"
+  },
+  "KOK": {
+    "webSocketConnectionId": "",
+    "symbol": "KOK-USDT"
+  },
+  "ROSN": {
+    "webSocketConnectionId": "",
+    "symbol": "ROSN-USDT"
+  },
+  "DORA": {
+    "webSocketConnectionId": "",
+    "symbol": "DORA-USDT"
+  },
+  "ZCX": {
+    "webSocketConnectionId": "",
+    "symbol": "ZCX-USDT"
+  },
+  "NORD": {
+    "webSocketConnectionId": "",
+    "symbol": "NORD-USDT"
+  },
+  "GMEE": {
+    "webSocketConnectionId": "",
+    "symbol": "GMEE-USDT"
+  },
+  "SFUND": {
+    "webSocketConnectionId": "",
+    "symbol": "SFUND-USDT"
+  },
+  "XAVA": {
+    "webSocketConnectionId": "",
+    "symbol": "XAVA-USDT"
+  },
+  "AI": {
+    "webSocketConnectionId": "",
+    "symbol": "AI-USDT"
+  },
+  "ALPACA": {
+    "webSocketConnectionId": "",
+    "symbol": "ALPACA-USDT"
+  },
+  "IOI": {
+    "webSocketConnectionId": "",
+    "symbol": "IOI-USDT"
+  },
+  "NFT": {
+    "webSocketConnectionId": "",
+    "symbol": "NFT-USDT"
+  },
+  "MNST": {
+    "webSocketConnectionId": "",
+    "symbol": "MNST-USDT"
+  },
+  "MEM": {
+    "webSocketConnectionId": "",
+    "symbol": "MEM-USDT"
+  },
+  "AGIX": {
+    "webSocketConnectionId": "",
+    "symbol": "AGIX-USDT"
+  },
+  "CQT": {
+    "webSocketConnectionId": "",
+    "symbol": "CQT-USDT"
+  },
+  "AIOZ": {
+    "webSocketConnectionId": "",
+    "symbol": "AIOZ-USDT"
+  },
+  "MARSH": {
+    "webSocketConnectionId": "",
+    "symbol": "MARSH-USDT"
+  },
+  "HAPI": {
+    "webSocketConnectionId": "",
+    "symbol": "HAPI-USDT"
+  },
+  "MODEFI": {
+    "webSocketConnectionId": "",
+    "symbol": "MODEFI-USDT"
+  },
+  "YFDAI": {
+    "webSocketConnectionId": "",
+    "symbol": "YFDAI-USDT"
+  },
+  "GENS": {
+    "webSocketConnectionId": "",
+    "symbol": "GENS-USDT"
+  },
+  "FORM": {
+    "webSocketConnectionId": "",
+    "symbol": "FORM-USDT"
+  },
+  "ARRR": {
+    "webSocketConnectionId": "",
+    "symbol": "ARRR-USDT"
+  },
+  "CEUR": {
+    "webSocketConnectionId": "",
+    "symbol": "CEUR-USDT"
+  },
+  "EXRD": {
+    "webSocketConnectionId": "",
+    "symbol": "EXRD-USDT"
+  },
+  "NGM": {
+    "webSocketConnectionId": "",
+    "symbol": "NGM-USDT"
+  },
+  "LPT": {
+    "webSocketConnectionId": "",
+    "symbol": "LPT-USDT"
+  },
+  "STMX": {
+    "webSocketConnectionId": "",
+    "symbol": "STMX-USDT"
+  },
+  "ASD": {
+    "webSocketConnectionId": "",
+    "symbol": "ASD-USDT"
+  },
+  "BOND": {
+    "webSocketConnectionId": "",
+    "symbol": "BOND-USDT"
+  },
+  "2CRZ": {
+    "webSocketConnectionId": "",
+    "symbol": "2CRZ-USDT"
+  },
+  "NEAR": {
+    "webSocketConnectionId": "",
+    "symbol": "NEAR-USDT"
+  },
+  "DFYN": {
+    "webSocketConnectionId": "",
+    "symbol": "DFYN-USDT"
+  },
+  "OOE": {
+    "webSocketConnectionId": "",
+    "symbol": "OOE-USDT"
+  },
+  "CFG": {
+    "webSocketConnectionId": "",
+    "symbol": "CFG-USDT"
+  },
+  "AXS": {
+    "webSocketConnectionId": "",
+    "symbol": "AXS-USDT"
+  },
+  "CLV": {
+    "webSocketConnectionId": "",
+    "symbol": "CLV-USDT"
+  },
+  "ROUTE": {
+    "webSocketConnectionId": "",
+    "symbol": "ROUTE-USDT"
+  },
+  "KAR": {
+    "webSocketConnectionId": "",
+    "symbol": "KAR-USDT"
+  },
+  "BURP": {
+    "webSocketConnectionId": "",
+    "symbol": "BURP-USDT"
+  },
+  "SHFT": {
+    "webSocketConnectionId": "",
+    "symbol": "SHFT-USDT"
+  },
+  "PMON": {
+    "webSocketConnectionId": "",
+    "symbol": "PMON-USDT"
+  },
+  "DPET": {
+    "webSocketConnectionId": "",
+    "symbol": "DPET-USDT"
+  },
+  "ERG": {
+    "webSocketConnectionId": "",
+    "symbol": "ERG-USDT"
+  },
+  "SOL": {
+    "webSocketConnectionId": "",
+    "symbol": "SOL-USDT"
+  },
+  "SLP": {
+    "webSocketConnectionId": "",
+    "symbol": "SLP-USDT"
+  },
+  "LITH": {
+    "webSocketConnectionId": "",
+    "symbol": "LITH-USDT"
+  },
+  "XCH": {
+    "webSocketConnectionId": "",
+    "symbol": "XCH-USDT"
+  },
+  "HAKA": {
+    "webSocketConnectionId": "",
+    "symbol": "HAKA-USDT"
+  },
+  "MTL": {
+    "webSocketConnectionId": "",
+    "symbol": "MTL-USDT"
+  },
+  "GALA": {
+    "webSocketConnectionId": "",
+    "symbol": "GALAX-USDT"
+  },
+  "TXA": {
+    "webSocketConnectionId": "",
+    "symbol": "TXA-USDT"
+  },
+  "CIRUS": {
+    "webSocketConnectionId": "",
+    "symbol": "CIRUS-USDT"
+  },
+  "QI": {
+    "webSocketConnectionId": "",
+    "symbol": "QI-USDT"
+  },
+  "ODDZ": {
+    "webSocketConnectionId": "",
+    "symbol": "ODDZ-USDT"
+  },
+  "PNT": {
+    "webSocketConnectionId": "",
+    "symbol": "PNT-USDT"
+  },
+  "XPR": {
+    "webSocketConnectionId": "",
+    "symbol": "XPR-USDT"
+  },
+  "TRIBE": {
+    "webSocketConnectionId": "",
+    "symbol": "TRIBE-USDT"
+  },
+  "MOVR": {
+    "webSocketConnectionId": "",
+    "symbol": "MOVR-USDT"
+  },
+  "WOO": {
+    "webSocketConnectionId": "",
+    "symbol": "WOO-USDT"
+  },
+  "WILD": {
+    "webSocketConnectionId": "",
+    "symbol": "WILD-USDT"
+  },
+  "QRDO": {
+    "webSocketConnectionId": "",
+    "symbol": "QRDO-USDT"
+  },
+  "SDN": {
+    "webSocketConnectionId": "",
+    "symbol": "SDN-USDT"
+  },
+  "MAKI": {
+    "webSocketConnectionId": "",
+    "symbol": "MAKI-USDT"
+  },
+  "REP": {
+    "webSocketConnectionId": "",
+    "symbol": "REP-USDT"
+  },
+  "BNT": {
+    "webSocketConnectionId": "",
+    "symbol": "BNT-USDT"
+  },
+  "OXT": {
+    "webSocketConnectionId": "",
+    "symbol": "OXT-USDT"
+  },
+  "BAL": {
+    "webSocketConnectionId": "",
+    "symbol": "BAL-USDT"
+  },
+  "STORJ": {
+    "webSocketConnectionId": "",
+    "symbol": "STORJ-USDT"
+  },
+  "YGG": {
+    "webSocketConnectionId": "",
+    "symbol": "YGG-USDT"
+  },
+  "NDAU": {
+    "webSocketConnectionId": "",
+    "symbol": "NDAU-USDT"
+  },
+  "SDAO": {
+    "webSocketConnectionId": "",
+    "symbol": "SDAO-USDT"
+  },
+  "XRP3L": {
+    "webSocketConnectionId": "",
+    "symbol": "XRP3L-USDT"
+  },
+  "XRP3S": {
+    "webSocketConnectionId": "",
+    "symbol": "XRP3S-USDT"
+  },
+  "SKL": {
+    "webSocketConnectionId": "",
+    "symbol": "SKL-USDT"
+  },
+  "NMR": {
+    "webSocketConnectionId": "",
+    "symbol": "NMR-USDT"
+  },
+  "IXS": {
+    "webSocketConnectionId": "",
+    "symbol": "IXS-USDT"
+  },
+  "TRB": {
+    "webSocketConnectionId": "",
+    "symbol": "TRB-USDT"
+  },
+  "DYDX": {
+    "webSocketConnectionId": "",
+    "symbol": "DYDX-USDT"
+  },
+  "XYO": {
+    "webSocketConnectionId": "",
+    "symbol": "XYO-USDT"
+  },
+  "GTC": {
+    "webSocketConnectionId": "",
+    "symbol": "GTC-USDT"
+  },
+  "EQX": {
+    "webSocketConnectionId": "",
+    "symbol": "EQX-USDT"
+  },
+  "RLC": {
+    "webSocketConnectionId": "",
+    "symbol": "RLC-USDT"
+  },
+  "XPRT": {
+    "webSocketConnectionId": "",
+    "symbol": "XPRT-USDT"
+  },
+  "EGLD": {
+    "webSocketConnectionId": "",
+    "symbol": "EGLD-USDT"
+  },
+  "HBAR": {
+    "webSocketConnectionId": "",
+    "symbol": "HBAR-USDT"
+  },
+  "DOGE3L": {
+    "webSocketConnectionId": "",
+    "symbol": "DOGE3L-USDT"
+  },
+  "DOGE3S": {
+    "webSocketConnectionId": "",
+    "symbol": "DOGE3S-USDT"
+  },
+  "FLOW": {
+    "webSocketConnectionId": "",
+    "symbol": "FLOW-USDT"
+  },
+  "NKN": {
+    "webSocketConnectionId": "",
+    "symbol": "NKN-USDT"
+  },
+  "PBX": {
+    "webSocketConnectionId": "",
+    "symbol": "PBX-USDT"
+  },
+  "SOL3L": {
+    "webSocketConnectionId": "",
+    "symbol": "SOL3L-USDT"
+  },
+  "SOL3S": {
+    "webSocketConnectionId": "",
+    "symbol": "SOL3S-USDT"
+  },
+  "MLN": {
+    "webSocketConnectionId": "",
+    "symbol": "MLN-USDT"
+  },
+  "XNL": {
+    "webSocketConnectionId": "",
+    "symbol": "XNL-USDT"
+  },
+  "SOLVE": {
+    "webSocketConnectionId": "",
+    "symbol": "SOLVE-USDT"
+  },
+  "WNCG": {
+    "webSocketConnectionId": "",
+    "symbol": "WNCG-USDT"
+  },
+  "DMTR": {
+    "webSocketConnectionId": "",
+    "symbol": "DMTR-USDT"
+  },
+  "LINK3L": {
+    "webSocketConnectionId": "",
+    "symbol": "LINK3L-USDT"
+  },
+  "LINK3S": {
+    "webSocketConnectionId": "",
+    "symbol": "LINK3S-USDT"
+  },
+  "DOT3L": {
+    "webSocketConnectionId": "",
+    "symbol": "DOT3L-USDT"
+  },
+  "DOT3S": {
+    "webSocketConnectionId": "",
+    "symbol": "DOT3S-USDT"
+  },
+  "CTSI": {
+    "webSocketConnectionId": "",
+    "symbol": "CTSI-USDT"
+  },
+  "ALICE": {
+    "webSocketConnectionId": "",
+    "symbol": "ALICE-USDT"
+  },
+  "OPUL": {
+    "webSocketConnectionId": "",
+    "symbol": "OPUL-USDT"
+  },
+  "ILV": {
+    "webSocketConnectionId": "",
+    "symbol": "ILV-USDT"
+  },
+  "BAND": {
+    "webSocketConnectionId": "",
+    "symbol": "BAND-USDT"
+  },
+  "FTT": {
+    "webSocketConnectionId": "",
+    "symbol": "FTT-USDT"
+  },
+  "DVPN": {
+    "webSocketConnectionId": "",
+    "symbol": "DVPN-USDT"
+  },
+  "SKU": {
+    "webSocketConnectionId": "",
+    "symbol": "SKU-USDT"
+  },
+  "EDG": {
+    "webSocketConnectionId": "",
+    "symbol": "EDG-USDT"
+  },
+  "SLIM": {
+    "webSocketConnectionId": "",
+    "symbol": "SLIM-USDT"
+  },
+  "TLM": {
+    "webSocketConnectionId": "",
+    "symbol": "TLM-USDT"
+  },
+  "DEXE": {
+    "webSocketConnectionId": "",
+    "symbol": "DEXE-USDT"
+  },
+  "MATTER": {
+    "webSocketConnectionId": "",
+    "symbol": "MATTER-USDT"
+  },
+  "RUNE": {
+    "webSocketConnectionId": "",
+    "symbol": "RUNE-USDT"
+  },
+  "RMRK": {
+    "webSocketConnectionId": "",
+    "symbol": "RMRK-USDT"
+  },
+  "SOV": {
+    "webSocketConnectionId": "",
+    "symbol": "SOV-USDT"
+  },
+  "BMON": {
+    "webSocketConnectionId": "",
+    "symbol": "BMON-USDT"
+  },
+  "C98": {
+    "webSocketConnectionId": "",
+    "symbol": "C98-USDT"
+  },
+  "BLOK": {
+    "webSocketConnectionId": "",
+    "symbol": "BLOK-USDT"
+  },
+  "SOLR": {
+    "webSocketConnectionId": "",
+    "symbol": "SOLR-USDT"
+  },
+  "ATOM3L": {
+    "webSocketConnectionId": "",
+    "symbol": "ATOM3L-USDT"
+  },
+  "ATOM3S": {
+    "webSocketConnectionId": "",
+    "symbol": "ATOM3S-USDT"
+  },
+  "UNI3L": {
+    "webSocketConnectionId": "",
+    "symbol": "UNI3L-USDT"
+  },
+  "UNI3S": {
+    "webSocketConnectionId": "",
+    "symbol": "UNI3S-USDT"
+  },
+  "WSIENNA": {
+    "webSocketConnectionId": "",
+    "symbol": "WSIENNA-USDT"
+  },
+  "PUSH": {
+    "webSocketConnectionId": "",
+    "symbol": "PUSH-USDT"
+  },
+  "NTVRK": {
+    "webSocketConnectionId": "",
+    "symbol": "NTVRK-USDT"
+  },
+  "AXS3L": {
+    "webSocketConnectionId": "",
+    "symbol": "AXS3L-USDT"
+  },
+  "AXS3S": {
+    "webSocketConnectionId": "",
+    "symbol": "AXS3S-USDT"
+  },
+  "FTM3L": {
+    "webSocketConnectionId": "",
+    "symbol": "FTM3L-USDT"
+  },
+  "FTM3S": {
+    "webSocketConnectionId": "",
+    "symbol": "FTM3S-USDT"
+  },
+  "FLAME": {
+    "webSocketConnectionId": "",
+    "symbol": "FLAME-USDT"
+  },
+  "AGLD": {
+    "webSocketConnectionId": "",
+    "symbol": "AGLD-USDT"
+  },
+  "NAKA": {
+    "webSocketConnectionId": "",
+    "symbol": "NAKA-USDT"
+  },
+  "YLD": {
+    "webSocketConnectionId": "",
+    "symbol": "YLD-USDT"
+  },
+  "REEF": {
+    "webSocketConnectionId": "",
+    "symbol": "REEF-USDT"
+  },
+  "TIDAL": {
+    "webSocketConnectionId": "",
+    "symbol": "TIDAL-USDT"
+  },
+  "TVK": {
+    "webSocketConnectionId": "",
+    "symbol": "TVK-USDT"
+  },
+  "INJ": {
+    "webSocketConnectionId": "",
+    "symbol": "INJ-USDT"
+  },
+  "BNB3L": {
+    "webSocketConnectionId": "",
+    "symbol": "BNB3L-USDT"
+  },
+  "BNB3S": {
+    "webSocketConnectionId": "",
+    "symbol": "BNB3S-USDT"
+  },
+  "MATIC3L": {
+    "webSocketConnectionId": "",
+    "symbol": "MATIC3L-USDT"
+  },
+  "MATIC3S": {
+    "webSocketConnectionId": "",
+    "symbol": "MATIC3S-USDT"
+  },
+  "NFTB": {
+    "webSocketConnectionId": "",
+    "symbol": "NFTB-USDT"
+  },
+  "VEGA": {
+    "webSocketConnectionId": "",
+    "symbol": "VEGA-USDT"
+  },
+  "ALPHA": {
+    "webSocketConnectionId": "",
+    "symbol": "ALPHA-USDT"
+  },
+  "BADGER": {
+    "webSocketConnectionId": "",
+    "symbol": "BADGER-USDT"
+  },
+  "ZKT": {
+    "webSocketConnectionId": "",
+    "symbol": "ZKT-USDT"
+  },
+  "AR": {
+    "webSocketConnectionId": "",
+    "symbol": "AR-USDT"
+  },
+  "XVS": {
+    "webSocketConnectionId": "",
+    "symbol": "XVS-USDT"
+  },
+  "JASMY": {
+    "webSocketConnectionId": "",
+    "symbol": "JASMY-USDT"
+  },
+  "PERP": {
+    "webSocketConnectionId": "",
+    "symbol": "PERP-USDT"
+  },
+  "GHST": {
+    "webSocketConnectionId": "",
+    "symbol": "GHST-USDT"
+  },
+  "SCLP": {
+    "webSocketConnectionId": "",
+    "symbol": "SCLP-USDT"
+  },
+  "SUPER": {
+    "webSocketConnectionId": "",
+    "symbol": "SUPER-USDT"
+  },
+  "CPOOL": {
+    "webSocketConnectionId": "",
+    "symbol": "CPOOL-USDT"
+  },
+  "HERO": {
+    "webSocketConnectionId": "",
+    "symbol": "HERO-USDT"
+  },
+  "BASIC": {
+    "webSocketConnectionId": "",
+    "symbol": "BASIC-USDT"
+  },
+  "XED": {
+    "webSocketConnectionId": "",
+    "symbol": "XED-USDT"
+  },
+  "AURY": {
+    "webSocketConnectionId": "",
+    "symbol": "AURY-USDT"
+  },
+  "SWASH": {
+    "webSocketConnectionId": "",
+    "symbol": "SWASH-USDT"
+  },
+  "LTO": {
+    "webSocketConnectionId": "",
+    "symbol": "LTO-USDT"
+  },
+  "MTRG": {
+    "webSocketConnectionId": "",
+    "symbol": "MTRG-USDT"
+  },
+  "DREAMS": {
+    "webSocketConnectionId": "",
+    "symbol": "DREAMS-USDT"
+  },
+  "QUICK": {
+    "webSocketConnectionId": "",
+    "symbol": "QUICK-USDT"
+  },
+  "TRU": {
+    "webSocketConnectionId": "",
+    "symbol": "TRU-USDT"
+  },
+  "WRX": {
+    "webSocketConnectionId": "",
+    "symbol": "WRX-USDT"
+  },
+  "TKO": {
+    "webSocketConnectionId": "",
+    "symbol": "TKO-USDT"
+  },
+  "SUSHI3L": {
+    "webSocketConnectionId": "",
+    "symbol": "SUSHI3L-USDT"
+  },
+  "SUSHI3S": {
+    "webSocketConnectionId": "",
+    "symbol": "SUSHI3S-USDT"
+  },
+  "NEAR3L": {
+    "webSocketConnectionId": "",
+    "symbol": "NEAR3L-USDT"
+  },
+  "NEAR3S": {
+    "webSocketConnectionId": "",
+    "symbol": "NEAR3S-USDT"
+  },
+  "DATA": {
+    "webSocketConnectionId": "",
+    "symbol": "DATA-USDT"
+  },
+  "ISP": {
+    "webSocketConnectionId": "",
+    "symbol": "ISP-USDT"
+  },
+  "CERE": {
+    "webSocketConnectionId": "",
+    "symbol": "CERE-USDT"
+  },
+  "SHILL": {
+    "webSocketConnectionId": "",
+    "symbol": "SHILL-USDT"
+  },
+  "HEGIC": {
+    "webSocketConnectionId": "",
+    "symbol": "HEGIC-USDT"
+  },
+  "ERN": {
+    "webSocketConnectionId": "",
+    "symbol": "ERN-USDT"
+  },
+  "FTG": {
+    "webSocketConnectionId": "",
+    "symbol": "FTG-USDT"
+  },
+  "PAXG": {
+    "webSocketConnectionId": "",
+    "symbol": "PAXG-USDT"
+  },
+  "AUDIO": {
+    "webSocketConnectionId": "",
+    "symbol": "AUDIO-USDT"
+  },
+  "ENS": {
+    "webSocketConnectionId": "",
+    "symbol": "ENS-USDT"
+  },
+  "AAVE3L": {
+    "webSocketConnectionId": "",
+    "symbol": "AAVE3L-USDT"
+  },
+  "AAVE3S": {
+    "webSocketConnectionId": "",
+    "symbol": "AAVE3S-USDT"
+  },
+  "SAND3L": {
+    "webSocketConnectionId": "",
+    "symbol": "SAND3L-USDT"
+  },
+  "SAND3S": {
+    "webSocketConnectionId": "",
+    "symbol": "SAND3S-USDT"
+  },
+  "XTM": {
+    "webSocketConnectionId": "",
+    "symbol": "XTM-USDT"
+  },
+  "MNW": {
+    "webSocketConnectionId": "",
+    "symbol": "MNW-USDT"
+  },
+  "FXS": {
+    "webSocketConnectionId": "",
+    "symbol": "FXS-USDT"
+  },
+  "ATA": {
+    "webSocketConnectionId": "",
+    "symbol": "ATA-USDT"
+  },
+  "VXV": {
+    "webSocketConnectionId": "",
+    "symbol": "VXV-USDT"
+  },
+  "DPR": {
+    "webSocketConnectionId": "",
+    "symbol": "DPR-USDT"
+  },
+  "CWAR": {
+    "webSocketConnectionId": "",
+    "symbol": "CWAR-USDT"
+  },
+  "PBR": {
+    "webSocketConnectionId": "",
+    "symbol": "PBR-USDT"
+  },
+  "WNXM": {
+    "webSocketConnectionId": "",
+    "symbol": "WNXM-USDT"
+  },
+  "ANT": {
+    "webSocketConnectionId": "",
+    "symbol": "ANT-USDT"
+  },
+  "SWP": {
+    "webSocketConnectionId": "",
+    "symbol": "SWP-USDT"
+  },
+  "TWT": {
+    "webSocketConnectionId": "",
+    "symbol": "TWT-USDT"
+  },
+  "OM": {
+    "webSocketConnectionId": "",
+    "symbol": "OM-USDT"
+  },
+  "ADX": {
+    "webSocketConnectionId": "",
+    "symbol": "ADX-USDT"
+  },
+  "AVAX3L": {
+    "webSocketConnectionId": "",
+    "symbol": "AVAX3L-USDT"
+  },
+  "AVAX3S": {
+    "webSocketConnectionId": "",
+    "symbol": "AVAX3S-USDT"
+  },
+  "MANA3L": {
+    "webSocketConnectionId": "",
+    "symbol": "MANA3L-USDT"
+  },
+  "MANA3S": {
+    "webSocketConnectionId": "",
+    "symbol": "MANA3S-USDT"
+  },
+  "GLM": {
+    "webSocketConnectionId": "",
+    "symbol": "GLM-USDT"
+  },
+  "BAKE": {
+    "webSocketConnectionId": "",
+    "symbol": "BAKE-USDT"
+  },
+  "NUM": {
+    "webSocketConnectionId": "",
+    "symbol": "NUM-USDT"
+  },
+  "VLX": {
+    "webSocketConnectionId": "",
+    "symbol": "VLX-USDT"
+  },
+  "TRADE": {
+    "webSocketConnectionId": "",
+    "symbol": "TRADE-USDT"
+  },
+  "1EARTH": {
+    "webSocketConnectionId": "",
+    "symbol": "1EARTH-USDT"
+  },
+  "MONI": {
+    "webSocketConnectionId": "",
+    "symbol": "MONI-USDT"
+  },
+  "LIKE": {
+    "webSocketConnectionId": "",
+    "symbol": "LIKE-USDT"
+  },
+  "MFT": {
+    "webSocketConnectionId": "",
+    "symbol": "MFT-USDT"
+  },
+  "LIT": {
+    "webSocketConnectionId": "",
+    "symbol": "LIT-USDT"
+  },
+  "KAVA": {
+    "webSocketConnectionId": "",
+    "symbol": "KAVA-USDT"
+  },
+  "SFP": {
+    "webSocketConnectionId": "",
+    "symbol": "SFP-USDT"
+  },
+  "BURGER": {
+    "webSocketConnectionId": "",
+    "symbol": "BURGER-USDT"
+  },
+  "ILA": {
+    "webSocketConnectionId": "",
+    "symbol": "ILA-USDT"
+  },
+  "CREAM": {
+    "webSocketConnectionId": "",
+    "symbol": "CREAM-USDT"
+  },
+  "RSR": {
+    "webSocketConnectionId": "",
+    "symbol": "RSR-USDT"
+  },
+  "IMX": {
+    "webSocketConnectionId": "",
+    "symbol": "IMX-USDT"
+  },
+  "GODS": {
+    "webSocketConnectionId": "",
+    "symbol": "GODS-USDT"
+  },
+  "KMA": {
+    "webSocketConnectionId": "",
+    "symbol": "KMA-USDT"
+  },
+  "SRM": {
+    "webSocketConnectionId": "",
+    "symbol": "SRM-USDT"
+  },
+  "POLC": {
+    "webSocketConnectionId": "",
+    "symbol": "POLC-USDT"
+  },
+  "XTAG": {
+    "webSocketConnectionId": "",
+    "symbol": "XTAG-USDT"
+  },
+  "MNET": {
+    "webSocketConnectionId": "",
+    "symbol": "MNET-USDT"
+  },
+  "NGC": {
+    "webSocketConnectionId": "",
+    "symbol": "NGC-USDT"
+  },
+  "HARD": {
+    "webSocketConnectionId": "",
+    "symbol": "HARD-USDT"
+  },
+  "GALAX3L": {
+    "webSocketConnectionId": "",
+    "symbol": "GALAX3L-USDT"
+  },
+  "GALAX3S": {
+    "webSocketConnectionId": "",
+    "symbol": "GALAX3S-USDT"
+  },
+  "UNIC": {
+    "webSocketConnectionId": "",
+    "symbol": "UNIC-USDT"
+  },
+  "POND": {
+    "webSocketConnectionId": "",
+    "symbol": "POND-USDT"
+  },
+  "VR": {
+    "webSocketConnectionId": "",
+    "symbol": "VR-USDT"
+  },
+  "EPIK": {
+    "webSocketConnectionId": "",
+    "symbol": "EPIK-USDT"
+  },
+  "NGL": {
+    "webSocketConnectionId": "",
+    "symbol": "NGL-USDT"
+  },
+  "KDON": {
+    "webSocketConnectionId": "",
+    "symbol": "KDON-USDT"
+  },
+  "PEL": {
+    "webSocketConnectionId": "",
+    "symbol": "PEL-USDT"
+  },
+  "LINA": {
+    "webSocketConnectionId": "",
+    "symbol": "LINA-USDT"
+  },
+  "KLAY": {
+    "webSocketConnectionId": "",
+    "symbol": "KLAY-USDT"
+  },
+  "CREDI": {
+    "webSocketConnectionId": "",
+    "symbol": "CREDI-USDT"
+  },
+  "TRVL": {
+    "webSocketConnectionId": "",
+    "symbol": "TRVL-USDT"
+  },
+  "LACE": {
+    "webSocketConnectionId": "",
+    "symbol": "LACE-USDT"
+  },
+  "ARKER": {
+    "webSocketConnectionId": "",
+    "symbol": "ARKER-USDT"
+  },
+  "BONDLY": {
+    "webSocketConnectionId": "",
+    "symbol": "BONDLY-USDT"
+  },
+  "XEC": {
+    "webSocketConnectionId": "",
+    "symbol": "XEC-USDT"
+  },
+  "HEART": {
+    "webSocketConnectionId": "",
+    "symbol": "HEART-USDT"
+  },
+  "UNB": {
+    "webSocketConnectionId": "",
+    "symbol": "UNB-USDT"
+  },
+  "GAFI": {
+    "webSocketConnectionId": "",
+    "symbol": "GAFI-USDT"
+  },
+  "KOL": {
+    "webSocketConnectionId": "",
+    "symbol": "KOL-USDT"
+  },
+  "H3RO3S": {
+    "webSocketConnectionId": "",
+    "symbol": "H3RO3S-USDT"
+  },
+  "FALCONS": {
+    "webSocketConnectionId": "",
+    "symbol": "FALCONS-USDT"
+  },
+  "UFO": {
+    "webSocketConnectionId": "",
+    "symbol": "UFO-USDT"
+  },
+  "CHMB": {
+    "webSocketConnectionId": "",
+    "symbol": "CHMB-USDT"
+  },
+  "GEEQ": {
+    "webSocketConnectionId": "",
+    "symbol": "GEEQ-USDT"
+  },
+  "ORC": {
+    "webSocketConnectionId": "",
+    "symbol": "ORC-USDT"
+  },
+  "RACEFI": {
+    "webSocketConnectionId": "",
+    "symbol": "RACEFI-USDT"
+  },
+  "PEOPLE": {
+    "webSocketConnectionId": "",
+    "symbol": "PEOPLE-USDT"
+  },
+  "ADS": {
+    "webSocketConnectionId": "",
+    "symbol": "ADS-USDT"
+  },
+  "SOS": {
+    "webSocketConnectionId": "",
+    "symbol": "SOS-USDT"
+  },
+  "WHALE": {
+    "webSocketConnectionId": "",
+    "symbol": "WHALE-USDT"
+  },
+  "CWEB": {
+    "webSocketConnectionId": "",
+    "symbol": "CWEB-USDT"
+  },
+  "IOTA": {
+    "webSocketConnectionId": "",
+    "symbol": "IOTA-USDT"
+  },
+  "OOKI": {
+    "webSocketConnectionId": "",
+    "symbol": "OOKI-USDT"
+  },
+  "HNT": {
+    "webSocketConnectionId": "",
+    "symbol": "HNT-USDT"
+  },
+  "GGG": {
+    "webSocketConnectionId": "",
+    "symbol": "GGG-USDT"
+  },
+  "REVU": {
+    "webSocketConnectionId": "",
+    "symbol": "REVU-USDT"
+  },
+  "CLH": {
+    "webSocketConnectionId": "",
+    "symbol": "CLH-USDT"
+  },
+  "PLGR": {
+    "webSocketConnectionId": "",
+    "symbol": "PLGR-USDT"
+  },
+  "GLMR": {
+    "webSocketConnectionId": "",
+    "symbol": "GLMR-USDT"
+  },
+  "LOVE": {
+    "webSocketConnectionId": "",
+    "symbol": "LOVE-USDT"
+  },
+  "CTC": {
+    "webSocketConnectionId": "",
+    "symbol": "CTC-USDT"
+  },
+  "GARI": {
+    "webSocketConnectionId": "",
+    "symbol": "GARI-USDT"
+  },
+  "FRR": {
+    "webSocketConnectionId": "",
+    "symbol": "FRR-USDT"
+  },
+  "ASTR": {
+    "webSocketConnectionId": "",
+    "symbol": "ASTR-USDT"
+  },
+  "ERTHA": {
+    "webSocketConnectionId": "",
+    "symbol": "ERTHA-USDT"
+  },
+  "FCON": {
+    "webSocketConnectionId": "",
+    "symbol": "FCON-USDT"
+  },
+  "ACA": {
+    "webSocketConnectionId": "",
+    "symbol": "ACA-USDT"
+  },
+  "MTS": {
+    "webSocketConnectionId": "",
+    "symbol": "MTS-USDT"
+  },
+  "ROAR": {
+    "webSocketConnectionId": "",
+    "symbol": "ROAR-USDT"
+  },
+  "HBB": {
+    "webSocketConnectionId": "",
+    "symbol": "HBB-USDT"
+  },
+  "SURV": {
+    "webSocketConnectionId": "",
+    "symbol": "SURV-USDT"
+  },
+  "CVX": {
+    "webSocketConnectionId": "",
+    "symbol": "CVX-USDT"
+  },
+  "AMP": {
+    "webSocketConnectionId": "",
+    "symbol": "AMP-USDT"
+  },
+  "ACT": {
+    "webSocketConnectionId": "",
+    "symbol": "ACT-USDT"
+  },
+  "MJT": {
+    "webSocketConnectionId": "",
+    "symbol": "MJT-USDT"
+  },
+  "SHX": {
+    "webSocketConnectionId": "",
+    "symbol": "SHX-USDT"
+  },
+  "STARLY": {
+    "webSocketConnectionId": "",
+    "symbol": "STARLY-USDT"
+  },
+  "ONSTON": {
+    "webSocketConnectionId": "",
+    "symbol": "ONSTON-USDT"
+  },
+  "RANKER": {
+    "webSocketConnectionId": "",
+    "symbol": "RANKER-USDT"
+  },
+  "WMT": {
+    "webSocketConnectionId": "",
+    "symbol": "WMT-USDT"
+  },
+  "XNO": {
+    "webSocketConnectionId": "",
+    "symbol": "XNO-USDT"
+  },
+  "MARS4": {
+    "webSocketConnectionId": "",
+    "symbol": "MARS4-USDT"
+  },
+  "TFUEL": {
+    "webSocketConnectionId": "",
+    "symbol": "TFUEL-USDT"
+  },
+  "METIS": {
+    "webSocketConnectionId": "",
+    "symbol": "METIS-USDT"
+  },
+  "LAVAX": {
+    "webSocketConnectionId": "",
+    "symbol": "LAVAX-USDT"
+  },
+  "WAL": {
+    "webSocketConnectionId": "",
+    "symbol": "WAL-USDT"
+  },
+  "BULL": {
+    "webSocketConnectionId": "",
+    "symbol": "BULL-USDT"
+  },
+  "SON": {
+    "webSocketConnectionId": "",
+    "symbol": "SON-USDT"
+  },
+  "MELOS": {
+    "webSocketConnectionId": "",
+    "symbol": "MELOS-USDT"
+  },
+  "APE": {
+    "webSocketConnectionId": "",
+    "symbol": "APE-USDT"
+  },
+  "GMT": {
+    "webSocketConnectionId": "",
+    "symbol": "GMT-USDT"
+  },
+  "BICO": {
+    "webSocketConnectionId": "",
+    "symbol": "BICO-USDT"
+  },
+  "STG": {
+    "webSocketConnectionId": "",
+    "symbol": "STG-USDT"
+  },
+  "LMR": {
+    "webSocketConnectionId": "",
+    "symbol": "LMR-USDT"
+  },
+  "LOKA": {
+    "webSocketConnectionId": "",
+    "symbol": "LOKA-USDT"
+  },
+  "URUS": {
+    "webSocketConnectionId": "",
+    "symbol": "URUS-USDT"
+  },
+  "JAM": {
+    "webSocketConnectionId": "",
+    "symbol": "JAM-USDT"
+  },
+  "BNC": {
+    "webSocketConnectionId": "",
+    "symbol": "BNC-USDT"
+  },
+  "LBP": {
+    "webSocketConnectionId": "",
+    "symbol": "LBP-USDT"
+  },
+  "CFX": {
+    "webSocketConnectionId": "",
+    "symbol": "CFX-USDT"
+  },
+  "LOOKS": {
+    "webSocketConnectionId": "",
+    "symbol": "LOOKS-USDT"
+  },
+  "XCN": {
+    "webSocketConnectionId": "",
+    "symbol": "XCN-USDT"
+  },
+  "KP3R": {
+    "webSocketConnectionId": "",
+    "symbol": "KP3R-USDT"
+  },
+  "TITAN": {
+    "webSocketConnectionId": "",
+    "symbol": "TITAN-USDT"
+  },
+  "INDI": {
+    "webSocketConnectionId": "",
+    "symbol": "INDI-USDT"
+  },
+  "UPO": {
+    "webSocketConnectionId": "",
+    "symbol": "UPO-USDT"
+  },
+  "SPELL": {
+    "webSocketConnectionId": "",
+    "symbol": "SPELL-USDT"
+  },
+  "SLCL": {
+    "webSocketConnectionId": "",
+    "symbol": "SLCL-USDT"
+  },
+  "RPC": {
+    "webSocketConnectionId": "",
+    "symbol": "RPC-USDT"
+  },
+  "CEEK": {
+    "webSocketConnectionId": "",
+    "symbol": "CEEK-USDT"
+  },
+  "VEMP": {
+    "webSocketConnectionId": "",
+    "symbol": "VEMP-USDT"
+  },
+  "BETA": {
+    "webSocketConnectionId": "",
+    "symbol": "BETA-USDT"
+  },
+  "NHCT": {
+    "webSocketConnectionId": "",
+    "symbol": "NHCT-USDT"
+  },
+  "ARNM": {
+    "webSocketConnectionId": "",
+    "symbol": "ARNM-USDT"
+  },
+  "FRA": {
+    "webSocketConnectionId": "",
+    "symbol": "FRA-USDT"
+  },
+  "VISION": {
+    "webSocketConnectionId": "",
+    "symbol": "VISION-USDT"
+  },
+  "COCOS": {
+    "webSocketConnectionId": "",
+    "symbol": "COCOS-USDT"
+  },
+  "ALPINE": {
+    "webSocketConnectionId": "",
+    "symbol": "ALPINE-USDT"
+  },
+  "BNX": {
+    "webSocketConnectionId": "",
+    "symbol": "BNX-USDT"
+  },
+  "ZBC": {
+    "webSocketConnectionId": "",
+    "symbol": "ZBC-USDT"
+  },
+  "WOOP": {
+    "webSocketConnectionId": "",
+    "symbol": "WOOP-USDT"
+  },
+  "T": {
+    "webSocketConnectionId": "",
+    "symbol": "T-USDT"
+  },
+  "NYM": {
+    "webSocketConnectionId": "",
+    "symbol": "NYM-USDT"
+  },
+  "VOXEL": {
+    "webSocketConnectionId": "",
+    "symbol": "VOXEL-USDT"
+  },
+  "PSTAKE": {
+    "webSocketConnectionId": "",
+    "symbol": "PSTAKE-USDT"
+  },
+  "SPA": {
+    "webSocketConnectionId": "",
+    "symbol": "SPA-USDT"
+  },
+  "SYNR": {
+    "webSocketConnectionId": "",
+    "symbol": "SYNR-USDT"
+  },
+  "DAR": {
+    "webSocketConnectionId": "",
+    "symbol": "DAR-USDT"
+  },
+  "MV": {
+    "webSocketConnectionId": "",
+    "symbol": "MV-USDT"
+  },
+  "XDEFI": {
+    "webSocketConnectionId": "",
+    "symbol": "XDEFI-USDT"
+  },
+  "RACA": {
+    "webSocketConnectionId": "",
+    "symbol": "RACA-USDT"
+  },
+  "XWG": {
+    "webSocketConnectionId": "",
+    "symbol": "XWG-USDT"
+  },
+  "HAWK": {
+    "webSocketConnectionId": "",
+    "symbol": "HAWK-USDT"
+  },
+  "SWFTC": {
+    "webSocketConnectionId": "",
+    "symbol": "SWFTC-USDT"
+  },
+  "IDEX": {
+    "webSocketConnectionId": "",
+    "symbol": "IDEX-USDT"
+  },
+  "BRWL": {
+    "webSocketConnectionId": "",
+    "symbol": "BRWL-USDT"
+  },
+  "PLATO": {
+    "webSocketConnectionId": "",
+    "symbol": "PLATO-USDT"
+  },
+  "TAUM": {
+    "webSocketConnectionId": "",
+    "symbol": "TAUM-USDT"
+  },
+  "CELR": {
+    "webSocketConnectionId": "",
+    "symbol": "CELR-USDT"
+  },
+  "AURORA": {
+    "webSocketConnectionId": "",
+    "symbol": "AURORA-USDT"
+  },
+  "ITAMCUBE": {
+    "webSocketConnectionId": "",
+    "symbol": "ITAMCUBE-USDT"
+  },
+  "POSI": {
+    "webSocketConnectionId": "",
+    "symbol": "POSI-USDT"
+  },
+  "COOHA": {
+    "webSocketConnectionId": "",
+    "symbol": "COOHA-USDT"
+  },
+  "EPK": {
+    "webSocketConnectionId": "",
+    "symbol": "EPK-USDT"
+  },
+  "PLD": {
+    "webSocketConnectionId": "",
+    "symbol": "PLD-USDT"
+  },
+  "PSL": {
+    "webSocketConnectionId": "",
+    "symbol": "PSL-USDT"
+  },
+  "PKF": {
+    "webSocketConnectionId": "",
+    "symbol": "PKF-USDT"
+  },
+  "OVR": {
+    "webSocketConnectionId": "",
+    "symbol": "OVR-USDT"
+  },
+  "SYS": {
+    "webSocketConnectionId": "",
+    "symbol": "SYS-USDT"
+  },
+  "BRISE": {
+    "webSocketConnectionId": "",
+    "symbol": "BRISE-USDT"
+  },
+  "DG": {
+    "webSocketConnectionId": "",
+    "symbol": "DG-USDT"
+  },
+  "EPX": {
+    "webSocketConnectionId": "",
+    "symbol": "EPX-USDT"
+  },
+  "GST": {
+    "webSocketConnectionId": "",
+    "symbol": "GST-USDT"
+  },
+  "PLY": {
+    "webSocketConnectionId": "",
+    "symbol": "PLY-USDT"
+  },
+  "GAL": {
+    "webSocketConnectionId": "",
+    "symbol": "GAL-USDT"
+  },
+  "BSW": {
+    "webSocketConnectionId": "",
+    "symbol": "BSW-USDT"
+  },
+  "FITFI": {
+    "webSocketConnectionId": "",
+    "symbol": "FITFI-USDT"
+  },
+  "FSN": {
+    "webSocketConnectionId": "",
+    "symbol": "FSN-USDT"
+  },
+  "H2O": {
+    "webSocketConnectionId": "",
+    "symbol": "H2O-USDT"
+  },
+  "GMM": {
+    "webSocketConnectionId": "",
+    "symbol": "GMM-USDT"
+  },
+  "AKT": {
+    "webSocketConnectionId": "",
+    "symbol": "AKT-USDT"
+  },
+  "SIN": {
+    "webSocketConnectionId": "",
+    "symbol": "SIN-USDT"
+  },
+  "aUSD": {
+    "webSocketConnectionId": "",
+    "symbol": "AUSD-USDT"
+  },
+  "BOBA": {
+    "webSocketConnectionId": "",
+    "symbol": "BOBA-USDT"
+  },
+  "KARA": {
+    "webSocketConnectionId": "",
+    "symbol": "KARA-USDT"
+  },
+  "BFC": {
+    "webSocketConnectionId": "",
+    "symbol": "BFC-USDT"
+  },
+  "BIFI": {
+    "webSocketConnectionId": "",
+    "symbol": "BIFI-USDT"
+  },
+  "DFA": {
+    "webSocketConnectionId": "",
+    "symbol": "DFA-USDT"
+  },
+  "KYL": {
+    "webSocketConnectionId": "",
+    "symbol": "KYL-USDT"
+  },
+  "FCD": {
+    "webSocketConnectionId": "",
+    "symbol": "FCD-USDT"
+  },
+  "MBL": {
+    "webSocketConnectionId": "",
+    "symbol": "MBL-USDT"
+  },
+  "CELT": {
+    "webSocketConnectionId": "",
+    "symbol": "CELT-USDT"
+  },
+  "DUSK": {
+    "webSocketConnectionId": "",
+    "symbol": "DUSK-USDT"
+  },
+  "USDD": {
+    "webSocketConnectionId": "",
+    "symbol": "USDD-USDT"
+  },
+  "MBOX": {
+    "webSocketConnectionId": "",
+    "symbol": "MBOX-USDT"
+  },
+  "MLS": {
+    "webSocketConnectionId": "",
+    "symbol": "MLS-USDT"
+  },
+  "AFK": {
+    "webSocketConnectionId": "",
+    "symbol": "AFK-USDT"
+  },
+  "ACH": {
+    "webSocketConnectionId": "",
+    "symbol": "ACH-USDT"
+  },
+  "SCRT": {
+    "webSocketConnectionId": "",
+    "symbol": "SCRT-USDT"
+  },
+  "APE3L": {
+    "webSocketConnectionId": "",
+    "symbol": "APE3L-USDT"
+  },
+  "APE3S": {
+    "webSocketConnectionId": "",
+    "symbol": "APE3S-USDT"
+  },
+  "STORE": {
+    "webSocketConnectionId": "",
+    "symbol": "STORE-USDT"
+  },
+  "GMT3L": {
+    "webSocketConnectionId": "",
+    "symbol": "GMT3L-USDT"
+  },
+  "GMT3S": {
+    "webSocketConnectionId": "",
+    "symbol": "GMT3S-USDT"
+  },
+  "CCD": {
+    "webSocketConnectionId": "",
+    "symbol": "CCD-USDT"
+  },
+  "LUNC": {
+    "webSocketConnectionId": "",
+    "symbol": "LUNC-USDT"
+  },
+  "USTC": {
+    "webSocketConnectionId": "",
+    "symbol": "USTC-USDT"
+  },
+  "OP": {
+    "webSocketConnectionId": "",
+    "symbol": "OP-USDT"
+  },
+  "JASMY3L": {
+    "webSocketConnectionId": "",
+    "symbol": "JASMY3L-USDT"
+  },
+  "JASMY3S": {
+    "webSocketConnectionId": "",
+    "symbol": "JASMY3S-USDT"
+  },
+  "EVER": {
+    "webSocketConnectionId": "",
+    "symbol": "EVER-USDT"
+  },
+  "MOOV": {
+    "webSocketConnectionId": "",
+    "symbol": "MOOV-USDT"
+  },
+  "IHC": {
+    "webSocketConnectionId": "",
+    "symbol": "IHC-USDT"
+  },
+  "ICX": {
+    "webSocketConnectionId": "",
+    "symbol": "ICX-USDT"
+  },
+  "WELL": {
+    "webSocketConnectionId": "",
+    "symbol": "WELL-USDT"
+  },
+  "FORT": {
+    "webSocketConnectionId": "",
+    "symbol": "FORT-USDT"
+  },
+  "USDP": {
+    "webSocketConnectionId": "",
+    "symbol": "USDP-USDT"
+  },
+  "CSPR": {
+    "webSocketConnectionId": "",
+    "symbol": "CSPR-USDT"
+  },
+  "WEMIX": {
+    "webSocketConnectionId": "",
+    "symbol": "WEMIX-USDT"
+  },
+  "REV3L": {
+    "webSocketConnectionId": "",
+    "symbol": "REV3L-USDT"
+  },
+  "OLE": {
+    "webSocketConnectionId": "",
+    "symbol": "OLE-USDT"
+  },
+  "LDO": {
+    "webSocketConnectionId": "",
+    "symbol": "LDO-USDT"
+  },
+  "CULT": {
+    "webSocketConnectionId": "",
+    "symbol": "CULT-USDT"
+  },
+  "FIDA": {
+    "webSocketConnectionId": "",
+    "symbol": "FIDA-USDT"
+  },
+  "BUSD": {
+    "webSocketConnectionId": "",
+    "symbol": "BUSD-USDT"
+  },
+  "RBP": {
+    "webSocketConnectionId": "",
+    "symbol": "RBP-USDT"
+  },
+  "SRBP": {
+    "webSocketConnectionId": "",
+    "symbol": "SRBP-USDT"
+  },
+  "HIBAYC": {
+    "webSocketConnectionId": "",
+    "symbol": "HIBAYC-USDT"
+  },
+  "OGV": {
+    "webSocketConnectionId": "",
+    "symbol": "OGV-USDT"
+  },
+  "WOMBAT": {
+    "webSocketConnectionId": "",
+    "symbol": "WOMBAT-USDT"
+  },
+  "HIPUNKS": {
+    "webSocketConnectionId": "",
+    "symbol": "HIPUNKS-USDT"
+  },
+  "FT": {
+    "webSocketConnectionId": "",
+    "symbol": "FT-USDT"
+  },
+  "HIENS4": {
+    "webSocketConnectionId": "",
+    "symbol": "HIENS4-USDT"
+  },
+  "EGAME": {
+    "webSocketConnectionId": "",
+    "symbol": "EGAME-USDT"
+  },
+  "STEPWATCH": {
+    "webSocketConnectionId": "",
+    "symbol": "STEPWATCH-USDT"
+  },
+  "XRP": {
+    "webSocketConnectionId": "",
+    "symbol": "XRP-USDT"
+  },
+  "KAT": {
+    "webSocketConnectionId": "",
+    "symbol": "KAT-USDT"
+  },
+  "GRIN": {
+    "webSocketConnectionId": "",
+    "symbol": "GRIN-USDT"
+  },
+  "USDT": {
+    "webSocketConnectionId": "",
+    "symbol": "USDT-USDC"
+  },
+  "DOSE": {
+    "webSocketConnectionId": "",
+    "symbol": "DOSE-USDC"
+  },
+  "NULS": {
+    "webSocketConnectionId": "",
+    "symbol": "NULS-BTC"
+  },
+  "CVC": {
+    "webSocketConnectionId": "",
+    "symbol": "CVC-BTC"
+  },
+  "SNT": {
+    "webSocketConnectionId": "",
+    "symbol": "SNT-BTC"
+  },
+  "PPT": {
+    "webSocketConnectionId": "",
+    "symbol": "PPT-BTC"
+  },
+  "BCD": {
+    "webSocketConnectionId": "",
+    "symbol": "BCD-BTC"
+  },
+  "AMB": {
+    "webSocketConnectionId": "",
+    "symbol": "AMB-BTC"
+  },
+  "QTUM": {
+    "webSocketConnectionId": "",
+    "symbol": "QTUM-BTC"
+  },
+  "AION": {
+    "webSocketConnectionId": "",
+    "symbol": "AION-BTC"
+  },
+  "UTK": {
+    "webSocketConnectionId": "",
+    "symbol": "UTK-BTC"
+  },
+  "AXPR": {
+    "webSocketConnectionId": "",
+    "symbol": "AXPR-BTC"
+  },
+  "PLAY": {
+    "webSocketConnectionId": "",
+    "symbol": "PLAY-BTC"
+  },
+  "DENT": {
+    "webSocketConnectionId": "",
+    "symbol": "DENT-BTC"
+  },
+  "DRGN": {
+    "webSocketConnectionId": "",
+    "symbol": "DRGN-BTC"
+  },
+  "CV": {
+    "webSocketConnectionId": "",
+    "symbol": "CV-BTC"
+  },
+  "KEY": {
+    "webSocketConnectionId": "",
+    "symbol": "KEY-BTC"
+  },
+  "ADB": {
+    "webSocketConnectionId": "",
+    "symbol": "ADB-BTC"
+  },
+  "CAPP": {
+    "webSocketConnectionId": "",
+    "symbol": "CAPP-BTC"
+  },
+  "ELF": {
+    "webSocketConnectionId": "",
+    "symbol": "ELF-BTC"
+  },
+  "TRAC": {
+    "webSocketConnectionId": "",
+    "symbol": "TRAC-BTC"
+  },
+  "LOOM": {
+    "webSocketConnectionId": "",
+    "symbol": "LOOM-BTC"
+  },
+  "QKC": {
+    "webSocketConnectionId": "",
+    "symbol": "QKC-BTC"
+  },
+  "CS": {
+    "webSocketConnectionId": "",
+    "symbol": "CS-BTC"
+  },
+  "WAN": {
+    "webSocketConnectionId": "",
+    "symbol": "WAN-BTC"
+  },
+  "DOCK": {
+    "webSocketConnectionId": "",
+    "symbol": "DOCK-BTC"
+  },
+  "ZRX": {
+    "webSocketConnectionId": "",
+    "symbol": "ZRX-BTC"
+  },
+  "CPC": {
+    "webSocketConnectionId": "",
+    "symbol": "CPC-BTC"
+  },
+  "MVP": {
+    "webSocketConnectionId": "",
+    "symbol": "MVP-BTC"
+  },
+  "OLT": {
+    "webSocketConnectionId": "",
+    "symbol": "OLT-BTC"
+  },
+  "DCR": {
+    "webSocketConnectionId": "",
+    "symbol": "DCR-BTC"
+  },
+  "NRG": {
+    "webSocketConnectionId": "",
+    "symbol": "NRG-BTC"
+  },
+  "FET": {
+    "webSocketConnectionId": "",
+    "symbol": "FET-BTC"
+  },
+  "RBTC": {
+    "webSocketConnectionId": "",
+    "symbol": "RBTC-BTC"
+  },
+  "RIF": {
+    "webSocketConnectionId": "",
+    "symbol": "RIF-BTC"
+  },
+  "FX": {
+    "webSocketConnectionId": "",
+    "symbol": "FX-BTC"
+  },
+  "ROOBEE": {
+    "webSocketConnectionId": "",
+    "symbol": "ROOBEE-BTC"
+  },
+  "UQC": {
+    "webSocketConnectionId": "",
+    "symbol": "UQC-BTC"
+  },
+  "WBTC": {
+    "webSocketConnectionId": "",
+    "symbol": "WBTC-BTC"
+  },
+  "STRK": {
+    "webSocketConnectionId": "",
+    "symbol": "STRK-BTC"
+  },
+  "LSK": {
+    "webSocketConnectionId": "",
+    "symbol": "LSK-BTC"
+  },
+  "UDOO": {
+    "webSocketConnectionId": "",
+    "symbol": "UDOO-ETH"
+  },
+  "ETH2": {
+    "webSocketConnectionId": "",
+    "symbol": "ETH2-ETH"
+  }
+}
