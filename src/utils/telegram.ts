@@ -1,7 +1,7 @@
 import axios from "axios"
 import {tryCatchFinallyUtil} from "./error"
 import {logError} from "./log"
-import {sleep} from "./sleep";
+import {sleep} from "./sleep"
 
 export const startServiceNotification = () => {
     tryCatchFinallyUtil(() => {
