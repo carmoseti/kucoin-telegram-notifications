@@ -256,7 +256,7 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                         for (let b = 0; b < websockets.length; b++) {
                             const [webSocketConnectionId, websocket] = websockets[b]
                             if (!(websocket.numberOfActiveSubscriptions === maximumWebSocketSubscriptions)) {
-                                const subscriptionId: string = `${new Date().getTime()}`
+                                let subscriptionId: string = `${new Date().getTime()}`
                                 // Subscribe
                                 KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS[webSocketConnectionId].webSocket.send(JSON.stringify({
                                     id: subscriptionId,
@@ -265,6 +265,7 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                                     response: false
                                 }))
 
+                                subscriptionId = `${new Date().getTime()}`
                                 KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS[webSocketConnectionId].webSocket.send(JSON.stringify({
                                     id: subscriptionId,
                                     type: "subscribe",
