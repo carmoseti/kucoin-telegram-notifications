@@ -440,6 +440,8 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
 
                     clearInterval(KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]].tickerSubscriptionAckInterval)
                     KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]].tickerSubscriptionAckInterval = undefined
+
+                    delete KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]
                 }
 
                 if (KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]) {
@@ -447,17 +449,22 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
                     clearInterval(KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]].tickerUnsubscriptionAckInterval)
                     KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]].tickerUnsubscriptionAckInterval = undefined
 
-                    delete KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]]
+                    delete KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]
                 }
 
                 if (KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[response.id]) {
                     clearInterval(KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[response.id]].snapshotSubscriptionAckInterval)
                     KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[response.id]].snapshotSubscriptionAckInterval = undefined
+
+                    delete KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[response.id]
                 }
 
                 if (KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[response.id]) {
                     clearInterval(KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[response.id]].snapshotUnsubscriptionAckInterval)
                     KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[response.id]].snapshotUnsubscriptionAckInterval = undefined
+
+                    delete KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[response.id]]
+                    delete KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[response.id]
                 }
             }
             if (response.type === "message") {
