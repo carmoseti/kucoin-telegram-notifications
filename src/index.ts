@@ -187,7 +187,9 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                 const rgTradingPairsForSubscription: Array<[string, KuCoinTelegramTradingPairs[""]]> = rgTradingPairsArray.slice(
                     a * maximumWebSocketSubscriptions, (a * maximumWebSocketSubscriptions) + maximumWebSocketSubscriptions
                 )
-                initiateSubscriptions(rgTradingPairsForSubscription)
+                sleep(1000).then(() => {
+                    initiateSubscriptions(rgTradingPairsForSubscription)
+                })
             }
         }
         // Subsequent
@@ -300,7 +302,9 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                     const rgTradingPairsForSubscription: Array<[string, KuCoinTelegramTradingPairs[""]]> = rgTradingPairsArray.slice(
                         a * maximumWebSocketSubscriptions, (a * maximumWebSocketSubscriptions) + maximumWebSocketSubscriptions
                     )
-                    initiateSubscriptions(rgTradingPairsForSubscription)
+                    sleep(1000).then(() => {
+                        initiateSubscriptions(rgTradingPairsForSubscription)
+                    })
                 }
             }
         }
@@ -329,7 +333,7 @@ const initiateSubscriptions = (rgTradingPairs: Array<[string, KuCoinTelegramTrad
 }
 
 const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenResponse, rgTradingPairs: Array<[string, KuCoinTelegramTradingPairs[""]]>) => {
-    const webSocketConnectionId: string = `${new Date().getTime()}.${Math.random()}`
+    const webSocketConnectionId: string = `${new Date().getTime()}`
     tryCatchFinallyUtil(() => {
         const webSocket: WebSocket = new WebSocket(`${kuCoinPublicTokenResponse.data.instanceServers[0].endpoint}?token=${kuCoinPublicTokenResponse.data.token}`)
 

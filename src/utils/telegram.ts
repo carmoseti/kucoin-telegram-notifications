@@ -15,7 +15,9 @@ export const startServiceNotification = () => {
             }
         }).catch((e) => {
             logError(`Telegram.startServiceNotification.axios() ${e}`)
-            sleep(1000)
+            sleep(1000).then(() => {
+                startServiceNotification()
+            })
             startServiceNotification()
         })
     }, (e) => {
