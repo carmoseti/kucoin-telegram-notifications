@@ -296,7 +296,6 @@ const initiateSubscriptions = (rgTradingPairs: Array<[string, KuCoinTelegramTrad
 
 const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenResponse, rgTradingPairs: Array<[string, KuCoinTelegramTradingPairs[""]]>) => {
     const webSocketConnectionId: string = `${new Date().getTime()}`
-    console.log(`webSocketConnectionId => ${webSocketConnectionId}`)
 
     tryCatchFinallyUtil(() => {
         const webSocket: WebSocket = new WebSocket(`${kuCoinPublicTokenResponse.data.instanceServers[0].endpoint}?token=${kuCoinPublicTokenResponse.data.token}`)
