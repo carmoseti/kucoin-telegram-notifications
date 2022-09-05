@@ -22,8 +22,6 @@ config()
 let KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS: KuCoinTelegramWebSocketConnections = {}
 let KUCOIN_TELEGRAM_SYMBOLS: KuCoinTelegramSymbols = {}
 let KUCOIN_TELEGRAM_TRADING_PAIRS: KuCoinTelegramTradingPairs = {}
-let KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER: Record<string, string> = {}
-let KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER: Record<string, string> = {}
 let KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER: Record<string, string> = {}
 let KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER: Record<string, string> = {}
 let KUCOIN_TELEGRAM_GET_SYMBOLS_INTERVAL_ID: NodeJS.Timeout
@@ -37,8 +35,6 @@ const resetRun = () => {
     KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS = {}
     KUCOIN_TELEGRAM_SYMBOLS = {}
     KUCOIN_TELEGRAM_TRADING_PAIRS = {}
-    KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER = {}
-    KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER = {}
     KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER = {}
     KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER = {}
 
@@ -144,7 +140,7 @@ const getSymbolsData = () => {
 const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsubscribeSymbols ?: KuCoinTelegramSymbols) => {
     tryCatchFinallyUtil(async () => {
         const markets: string[] = `${process.env.KUCOIN_QUOTE_ASSETS}`.split(",")
-        const maximumWebSocketSubscriptions: number = Number(`${process.env.KUCOIN_WEB_SOCKET_CONNECTION_SUBSCRIPTION_TOPICS_MAX_COUNT}`) / 2 // Divide by 2 because of APE-IN subscriptions
+        const maximumWebSocketSubscriptions: number = Number(`${process.env.KUCOIN_WEB_SOCKET_CONNECTION_SUBSCRIPTION_TOPICS_MAX_COUNT}`)
         const rgKuCoinSymbolsEntries = Object.entries(KUCOIN_TELEGRAM_SYMBOLS)
         for (let a = 0; a < markets.length; a++) {
             const quoteCurrency: string = markets[a]
@@ -162,8 +158,6 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                                 quoteDecimalPlaces: getDecimalPlacesFromIncrement(parseFloat(tradePair.priceIncrement)),
                                 snapshotSubscriptionAckInterval: undefined,
                                 snapshotUnsubscriptionAckInterval: undefined,
-                                tickerSubscriptionAckInterval: undefined,
-                                tickerUnsubscriptionAckInterval: undefined,
                                 notificationBuyPrice: 0,
                                 notificationStrikeCount: 0,
                                 notificationStrikeTimeoutId: undefined,
@@ -187,16 +181,14 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                 const rgTradingPairsForSubscription: Array<[string, KuCoinTelegramTradingPairs[""]]> = rgTradingPairsArray.slice(
                     a * maximumWebSocketSubscriptions, (a * maximumWebSocketSubscriptions) + maximumWebSocketSubscriptions
                 )
-                sleep(1000).then(() => {
-                    initiateSubscriptions(rgTradingPairsForSubscription)
-                })
+                initiateSubscriptions(rgTradingPairsForSubscription)
             }
         }
         // Subsequent
         else {
             const unsubscribeSymbolsEntries: Array<[string, KuCoinTelegramSymbols[""]]> = Object.entries(unsubscribeSymbols)
             if (unsubscribeSymbolsEntries.length > 0) {
-                const handleTradingPairUnsubscription = (webSocketConnectionId: string, baseCurrency: string, tradePair: KuCoinTelegramTradingPairs[""], subscriptionType: 'snapshot' | 'ticker') => {
+                const handleTradingPairUnsubscription = (webSocketConnectionId: string, baseCurrency: string, tradePair: KuCoinTelegramTradingPairs[""], subscriptionType: 'snapshot') => {
                     const unsubscriptionId: string = `${new Date().getTime()}`
                     // Unsubscribe
                     KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS[webSocketConnectionId].webSocket.send(JSON.stringify({
@@ -205,27 +197,7 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                         topic: `/market/${subscriptionType}:${tradePair.symbol}`,
                         response: true
                     }))
-
-                    if (subscriptionType === 'ticker') KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[unsubscriptionId] = baseCurrency
                     if (subscriptionType === 'snapshot') KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[unsubscriptionId] = baseCurrency
-                }
-
-                for (let a = 0; a < unsubscribeSymbolsEntries.length; a++) {
-                    const [baseCurrency] = unsubscribeSymbolsEntries[a]
-                    const tradePair: KuCoinTelegramTradingPairs[""] = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
-
-                    handleTradingPairUnsubscription(tradePair.webSocketConnectionId, baseCurrency, tradePair, 'ticker')
-
-                    KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency].tickerUnsubscriptionAckInterval = setInterval(() => {
-                        const previousUnsubscriptionId: string = Object.entries(KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER).filter(([_, v]) => v === baseCurrency)[0][0]
-                        delete KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[previousUnsubscriptionId]
-
-                        handleTradingPairUnsubscription(tradePair.webSocketConnectionId, baseCurrency, tradePair, "ticker")
-                    }, Math.floor(1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)) * Object.entries(KUCOIN_TELEGRAM_TRADING_PAIRS).length)
-
-                    await sleep(Math.floor(
-                        1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)
-                    ))
                 }
 
                 for (let a = 0; a < unsubscribeSymbolsEntries.length; a++) {
@@ -258,16 +230,8 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                         for (let b = 0; b < websockets.length; b++) {
                             const [webSocketConnectionId, websocket] = websockets[b]
                             if (!(websocket.numberOfActiveSubscriptions === maximumWebSocketSubscriptions)) {
-                                let subscriptionId: string = `${new Date().getTime()}`
+                                const subscriptionId: string = `${new Date().getTime()}`
                                 // Subscribe
-                                KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS[webSocketConnectionId].webSocket.send(JSON.stringify({
-                                    id: subscriptionId,
-                                    type: "subscribe",
-                                    topic: `/market/ticker:${tradePair.symbol}`,
-                                    response: false
-                                }))
-
-                                subscriptionId = `${new Date().getTime()}`
                                 KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS[webSocketConnectionId].webSocket.send(JSON.stringify({
                                     id: subscriptionId,
                                     type: "subscribe",
@@ -302,9 +266,7 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                     const rgTradingPairsForSubscription: Array<[string, KuCoinTelegramTradingPairs[""]]> = rgTradingPairsArray.slice(
                         a * maximumWebSocketSubscriptions, (a * maximumWebSocketSubscriptions) + maximumWebSocketSubscriptions
                     )
-                    sleep(1000).then(() => {
-                        initiateSubscriptions(rgTradingPairsForSubscription)
-                    })
+                    initiateSubscriptions(rgTradingPairsForSubscription)
                 }
             }
         }
@@ -334,6 +296,8 @@ const initiateSubscriptions = (rgTradingPairs: Array<[string, KuCoinTelegramTrad
 
 const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenResponse, rgTradingPairs: Array<[string, KuCoinTelegramTradingPairs[""]]>) => {
     const webSocketConnectionId: string = `${new Date().getTime()}`
+    console.log(`webSocketConnectionId => ${webSocketConnectionId}`)
+
     tryCatchFinallyUtil(() => {
         const webSocket: WebSocket = new WebSocket(`${kuCoinPublicTokenResponse.data.instanceServers[0].endpoint}?token=${kuCoinPublicTokenResponse.data.token}`)
 
@@ -342,7 +306,7 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
             numberOfActiveSubscriptions: 0
         }
 
-        const handleTradingPairSubscription = (baseCurrency: string, tradingPair: KuCoinTelegramTradingPairs[""], subscriptionType: 'snapshot' | 'ticker') => {
+        const handleTradingPairSubscription = (baseCurrency: string, tradingPair: KuCoinTelegramTradingPairs[""], subscriptionType: 'snapshot') => {
             const subscriptionId: string = `${new Date().getTime()}`
             // Subscribe
             webSocket.send(JSON.stringify({
@@ -351,8 +315,6 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
                 topic: `/market/${subscriptionType}:${tradingPair.symbol}`,
                 response: true
             }))
-
-            if (subscriptionType === 'ticker') KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[subscriptionId] = baseCurrency
             if (subscriptionType === 'snapshot') KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[subscriptionId] = baseCurrency
         }
 
@@ -388,28 +350,6 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
         })
 
         webSocket.on("open", async () => {
-
-            for (let a = 0; a < rgTradingPairs.length; a++) {
-                const [baseCurrency, rgTradePair] = rgTradingPairs[a]
-
-                if (KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]) {
-                    handleTradingPairSubscription(baseCurrency, rgTradePair, 'ticker')
-
-                    KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency].tickerSubscriptionAckInterval = setInterval(() => {
-                        if (Object.entries(KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER).filter(([_, v]) => v === baseCurrency)[0]) {
-                            const previousSubscriptionId: string = Object.entries(KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER).filter(([_, v]) => v === baseCurrency)[0][0]
-                            delete KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[previousSubscriptionId]
-                        }
-
-                        handleTradingPairSubscription(baseCurrency, rgTradePair, 'ticker')
-                    }, Math.floor(1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)) * rgTradingPairs.length)
-
-                    await sleep(Math.floor(
-                        1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)
-                    ))
-                }
-            }
-
             for (let a = 0; a < rgTradingPairs.length; a++) {
                 const [baseCurrency, rgTradePair] = rgTradingPairs[a]
 
@@ -438,24 +378,6 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
                 /*console.log(JSON.stringify(response))*/
             }
             if (response.type === "ack") {
-                if (KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]) {
-                    KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]].webSocketConnectionId = webSocketConnectionId
-                    KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS[webSocketConnectionId].numberOfActiveSubscriptions += 1
-
-                    clearInterval(KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]].tickerSubscriptionAckInterval)
-                    KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]].tickerSubscriptionAckInterval = undefined
-
-                    delete KUCOIN_TICKER_SUBSCRIPTIONS_TRACKER[response.id]
-                }
-
-                if (KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]) {
-                    KUCOIN_TELEGRAM_WEB_SOCKET_CONNECTIONS[webSocketConnectionId].numberOfActiveSubscriptions -= 1
-                    clearInterval(KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]].tickerUnsubscriptionAckInterval)
-                    KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]].tickerUnsubscriptionAckInterval = undefined
-
-                    delete KUCOIN_TICKER_UNSUBSCRIPTIONS_TRACKER[response.id]
-                }
-
                 if (KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[response.id]) {
                     clearInterval(KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[response.id]].snapshotSubscriptionAckInterval)
                     KUCOIN_TELEGRAM_TRADING_PAIRS[KUCOIN_SNAPSHOT_SUBSCRIPTIONS_TRACKER[response.id]].snapshotSubscriptionAckInterval = undefined
@@ -472,14 +394,14 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
                 }
             }
             if (response.type === "message") {
-                if (response.subject === "trade.ticker") {
-                    // Notification Service
-                    const symbol: string = getSymbolFromTopic(response.topic, 'ticker')
+                if (response.subject === "trade.snapshot") {
+                    const symbol: string = getSymbolFromTopic(response.topic, 'snapshot')
                     const [baseCurrency, quoteCurrency] = symbol.split(`${process.env.KUCOIN_SYMBOL_CURRENCIES_SPLIT_CHARACTER}`) // ETH-USDT
                     let tradingPair = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
                     if (tradingPair) {
+                        // Notification Service
                         const newNotificationBuyPrice: number = tradingPair.notificationStrikeCount === 0 ?
-                            fixDecimalPlaces((1.00 + Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)) * Number(response.data.price), tradingPair.quoteDecimalPlaces) :
+                            fixDecimalPlaces((1.00 + Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT)) * Number(response.data.data.lastTradedPrice), tradingPair.quoteDecimalPlaces) :
                             fixDecimalPlaces(tradingPair.notificationBuyPrice + tradingPair.notificationStrikeUnitPrice, tradingPair.quoteDecimalPlaces)
 
                         if (tradingPair.notificationBuyPrice) {
@@ -491,7 +413,7 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
                         }
 
                         tradingPair = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
-                        if ((Number(response.data.price) >= tradingPair.notificationBuyPrice) && (tradingPair.notificationBuyPrice !== 0)) {
+                        if ((Number(response.data.data.lastTradedPrice) >= tradingPair.notificationBuyPrice) && (tradingPair.notificationBuyPrice !== 0)) {
                             KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency].notificationStrikeCount += 1
                             tradingPair = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
                             if (tradingPair.notificationStrikeCount === 1) {
@@ -500,7 +422,7 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
 
                             tradingPair = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
                             if (tradingPair.notificationStrikeCount > 1) {
-                                buySignalStrikeNotification(symbol, Number(response.data.price), tradingPair.notificationStrikeCount, Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT), quoteCurrency)
+                                buySignalStrikeNotification(symbol, Number(response.data.data.lastTradedPrice), tradingPair.notificationStrikeCount, Number(process.env.KUCOIN_NOTIFICATIONS_STRIKE_UNIT_PERCENT), quoteCurrency)
                             }
 
                             if (tradingPair.notificationStrikeTimeoutId) clearTimeout(tradingPair.notificationStrikeTimeoutId)
@@ -517,14 +439,8 @@ const openWebSocketConnection = (kuCoinPublicTokenResponse: KuCoinPublicTokenRes
                             tradingPair = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
                             KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency].notificationBuyPrice = tradingPair.notificationBuyPrice + tradingPair.notificationStrikeUnitPrice
                         }
-                    }
-                }
-                if (response.subject === "trade.snapshot") {
-                    // APE-IN service
-                    const symbol: string = getSymbolFromTopic(response.topic, 'snapshot')
-                    const [baseCurrency] = symbol.split(`${process.env.KUCOIN_SYMBOL_CURRENCIES_SPLIT_CHARACTER}`) // ETH-USDT
-                    const tradingPair = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
-                    if (tradingPair) {
+
+                        // APE-IN service
                         const percentChange: number = Math.round(((response.data.data.lastTradedPrice - response.data.data.high) / response.data.data.high) * 10000) / 100
                         if (percentChange < tradingPair.apeInPercentage) {
                             sendApeInNotification(response.data.data.symbol, percentChange)

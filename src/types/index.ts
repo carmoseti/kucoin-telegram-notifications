@@ -40,16 +40,10 @@ export type KuCoinSymbolsResponse = {
 export type KuCoinWebSocketResponse = {
     type: "welcome" | "ack" | "message"
     id?: string
-    subject?: "trade.ticker" | "trade.snapshot"
+    subject?: "trade.snapshot"
     topic?: string
     data: {
-        bestAsk?: string
-        bestAskSize?: string
-        bestBid?: string
-        bestBidSize?: string
-        price?: string
         sequence?: string
-        size?: string
         data?: {
             averagePrice: number
             baseCurrency: string
@@ -80,7 +74,6 @@ export type KuCoinWebSocketResponse = {
             vol: number
             volValue: number
         }
-        time: number
     }
 }
 
@@ -92,8 +85,6 @@ export type KuCoinTelegramTradingPairs = Record<string, {
     quoteDecimalPlaces: number
     snapshotSubscriptionAckInterval: NodeJS.Timeout
     snapshotUnsubscriptionAckInterval: NodeJS.Timeout
-    tickerSubscriptionAckInterval: NodeJS.Timeout
-    tickerUnsubscriptionAckInterval: NodeJS.Timeout
     notificationBuyPrice :number
     notificationStrikeCount :number
     notificationStrikeTimeoutId :NodeJS.Timeout
