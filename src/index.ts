@@ -67,10 +67,9 @@ const getSymbolsData = () => {
                 // Subsequent (Post-startup)
                 else {
                     const newKuCoinSymbols: KuCoinTelegramSymbols = {}
-
                     for (let a = 0; a < data.data.data.length; a++) {
                         const tradePair = data.data.data[a]
-                        const [baseCurrency] = tradePair.symbol.split(`${process.env.KUCOIN_SYMBOL_CURRENCIES_SPLIT_CHARACTER}`)
+                        const [baseCurrency,quoteCurrency] = tradePair.symbol.split(`${process.env.KUCOIN_SYMBOL_CURRENCIES_SPLIT_CHARACTER}`)
                         if (!KUCOIN_TELEGRAM_SYMBOLS[baseCurrency]) {
                             // New
                             if (newKuCoinSymbols[baseCurrency]) {
@@ -81,6 +80,13 @@ const getSymbolsData = () => {
                             } else {
                                 newKuCoinSymbols[baseCurrency] = {
                                     [tradePair.quoteCurrency]: tradePair
+                                }
+                            }
+                        } else {
+                            if (!KUCOIN_TELEGRAM_SYMBOLS[baseCurrency][quoteCurrency]) {
+                                newKuCoinSymbols[baseCurrency] = {
+                                    ...KUCOIN_TELEGRAM_SYMBOLS[baseCurrency],
+                                    [quoteCurrency]: tradePair
                                 }
                             }
                         }
@@ -203,19 +209,20 @@ const processTradingPairs = (newSubscribeSymbols ?: KuCoinTelegramSymbols, unsub
                 for (let a = 0; a < unsubscribeSymbolsEntries.length; a++) {
                     const [baseCurrency] = unsubscribeSymbolsEntries[a]
                     const tradePair: KuCoinTelegramTradingPairs[""] = KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency]
+                    if (tradePair) {
+                        handleTradingPairUnsubscription(tradePair.webSocketConnectionId, baseCurrency, tradePair, 'snapshot')
 
-                    handleTradingPairUnsubscription(tradePair.webSocketConnectionId, baseCurrency, tradePair, 'snapshot')
+                        KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency].snapshotUnsubscriptionAckInterval = setInterval(() => {
+                            const previousUnsubscriptionId: string = Object.entries(KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER).filter(([_, v]) => v === baseCurrency)[0][0]
+                            delete KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[previousUnsubscriptionId]
 
-                    KUCOIN_TELEGRAM_TRADING_PAIRS[baseCurrency].snapshotUnsubscriptionAckInterval = setInterval(() => {
-                        const previousUnsubscriptionId: string = Object.entries(KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER).filter(([_, v]) => v === baseCurrency)[0][0]
-                        delete KUCOIN_SNAPSHOT_UNSUBSCRIPTIONS_TRACKER[previousUnsubscriptionId]
+                            handleTradingPairUnsubscription(tradePair.webSocketConnectionId, baseCurrency, tradePair, "snapshot")
+                        }, Math.floor(1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)) * Object.entries(KUCOIN_TELEGRAM_TRADING_PAIRS).length)
 
-                        handleTradingPairUnsubscription(tradePair.webSocketConnectionId, baseCurrency, tradePair, "snapshot")
-                    }, Math.floor(1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)) * Object.entries(KUCOIN_TELEGRAM_TRADING_PAIRS).length)
-
-                    await sleep(Math.floor(
-                        1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)
-                    ))
+                        await sleep(Math.floor(
+                            1000 / Number(process.env.KUCOIN_WEB_SOCKET_CONNECTION_MESSAGES_PER_SECOND_MAX_COUNT)
+                        ))
+                    }
                 }
             }
 
